@@ -27,7 +27,7 @@ gem 'deface'
 group :production do
   # gem 'daemons'
   # gem 'delayed_job_active_record'
-  gem "sidekiq"
+  gem "sidekiq", '<= 6.0'
 end
 
 group :development, :test do
