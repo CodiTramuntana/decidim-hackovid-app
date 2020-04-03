@@ -6,8 +6,6 @@ ruby RUBY_VERSION
 
 DECIDIM_VERSION = { git: 'https://github.com/decidim/decidim.git', branch: 'release/0.21.0' }
 
-gem 'daemons'
-gem 'delayed_job_active_record'
 gem 'puma', '>= 3.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'whenever'
@@ -25,6 +23,12 @@ gem 'recaptcha', require: 'recaptcha/rails'
 
 # use deface to decorate Decidim views unobtrusively
 gem 'deface'
+
+group :production do
+  # gem 'daemons'
+  # gem 'delayed_job_active_record'
+  gem "sidekiq"
+end
 
 group :development, :test do
   gem 'better_errors'
