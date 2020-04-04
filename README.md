@@ -151,11 +151,15 @@ There are some overrides that must be checked on every upgrade:
   }
 }
 
-/*** follow buttons****/
+/*** hide follow buttons****/
 .card--proposal .follow_status{
   display: none;
 }
 
+/*** hide process menu button for process ***/
+.process-nav__link[href="/processes/solucions-hackovid"]{
+  display: none;
+}
 </style>
 <script src='https://www.google.com/recaptcha/api.js'></script>
 
