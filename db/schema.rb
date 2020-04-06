@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_02_224770) do
+ActiveRecord::Schema.define(version: 2020_04_06_211905) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
@@ -1500,6 +1500,30 @@ ActiveRecord::Schema.define(version: 2020_04_02_224770) do
     t.index ["uid"], name: "index_oauth_applications_on_uid", unique: true
   end
 
+  create_table "ods", force: :cascade do |t|
+    t.jsonb "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "solutions", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.text "youtube_link"
+    t.string "github_link"
+    t.bigint "decidim_category_id"
+    t.string "web_url"
+    t.string "android_mkt_url"
+    t.string "ios_mkt_url"
+    t.bigint "ods_id"
+    t.datetime "published_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["decidim_category_id"], name: "index_solutions_on_decidim_category_id"
+    t.index ["ods_id"], name: "index_solutions_on_ods_id"
+    t.index ["title"], name: "index_solutions_on_title"
+  end
+
   create_table "versions", force: :cascade do |t|
     t.string "item_type", null: false
     t.integer "item_id", null: false
@@ -1539,4 +1563,6 @@ ActiveRecord::Schema.define(version: 2020_04_02_224770) do
   add_foreign_key "oauth_access_tokens", "decidim_users", column: "resource_owner_id"
   add_foreign_key "oauth_access_tokens", "oauth_applications", column: "application_id"
   add_foreign_key "oauth_applications", "decidim_organizations"
+  add_foreign_key "solutions", "decidim_categories"
+  add_foreign_key "solutions", "ods", column: "ods_id"
 end

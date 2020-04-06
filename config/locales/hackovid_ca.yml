@@ -10,4 +10,10 @@ ca:
           developer: "SI ETS DESENVOLUPADOR/A TIC"
           developer_explanation: "Uneix-te a la Hackovid i aporta solucions a les necessitats de la ciutadania durant el confinament."
           how_to_participate_to_hackovid: "Participa a la Hackovid!"
+  solutions:
+    filters:
+      category: Categoria
+      search: Cerca
+    index:
+      solutions_count: "%{count} Solucions"
           
