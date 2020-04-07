@@ -17,7 +17,6 @@ class SolutionsController < Decidim::ApplicationController
     @solutions = search
                      .results
                      .includes(:sd_goal)
-                     # .includes(:category)
     @solutions = paginate(@solutions)
   end
 
@@ -27,12 +26,13 @@ class SolutionsController < Decidim::ApplicationController
 
   def create
     @solution = Solution.new( solution_params )
+    @solution.user= current_user
     if @solution.save
-        flash[:success] = I18n.t("solutions.success")
-        redirect_to solutions_path
-      else
-        render :new
-      end
+      flash[:success] = I18n.t("solutions.success")
+      redirect_to solutions_path
+    else
+      render :new
+    end
   end
 
   private
