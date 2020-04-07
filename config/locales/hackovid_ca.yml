@@ -1,4 +1,8 @@
 ca:
+  activemodel:
+    attributes:
+      solution:
+        title: Títol
   decidim:
     pages:
       home:
@@ -15,5 +19,9 @@ ca:
       category: Categoria
       search: Cerca
     index:
+      new_solution: "Nova solució"
       solutions_count: "%{count} Solucions"
-          
+    new:
+      new_solution: "Nova solució"
+      publish: "Publicar Solució"
+    success: "S'ha publicat correctament la solució."

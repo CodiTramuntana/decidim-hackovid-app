@@ -8,6 +8,10 @@ require "cell/partial"
 # https://github.com/decidim/decidim/tree/develop/decidim-core/app/cells/decidim
 class SolutionMCell < Decidim::CardMCell
 
+  def show
+    render
+  end
+
   private
 
   def title

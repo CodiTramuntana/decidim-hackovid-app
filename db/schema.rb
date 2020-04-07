@@ -1500,6 +1500,12 @@ ActiveRecord::Schema.define(version: 2020_04_06_211905) do
     t.index ["uid"], name: "index_oauth_applications_on_uid", unique: true
   end
 
+  create_table "ods", force: :cascade do |t|
+    t.jsonb "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "sd_goals", force: :cascade do |t|
     t.jsonb "name"
     t.datetime "created_at", null: false
@@ -1507,19 +1513,19 @@ ActiveRecord::Schema.define(version: 2020_04_06_211905) do
   end
 
   create_table "solutions", force: :cascade do |t|
-    t.string "title"
-    t.text "description"
-    t.text "youtube_link"
-    t.string "github_link"
+    t.string "title", null: false
+    t.text "description", null: false
+    t.text "youtube_link", null: false
+    t.string "github_link", null: false
     t.string "web_url"
     t.string "android_mkt_url"
     t.string "ios_mkt_url"
     t.bigint "sd_goal_id"
-    t.string "team_name"
-    t.string "responsible_info"
-    t.datetime "published_at"
+    t.string "team_name", null: false
+    t.bigint "decidim_user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["decidim_user_id"], name: "index_solutions_on_decidim_user_id"
     t.index ["sd_goal_id"], name: "index_solutions_on_sd_goal_id"
     t.index ["title"], name: "index_solutions_on_title"
   end

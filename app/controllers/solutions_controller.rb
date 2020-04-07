@@ -7,6 +7,7 @@ class SolutionsController < Decidim::ApplicationController
   include ::Decidim::CheckBoxesTreeHelper
 
   helper ::Decidim::FiltersHelper
+  helper ::Decidim::ActionAuthorizationHelper
   helper_method :current_participatory_space
   helper_method :current_component
   helper_method :filter_categories_values
@@ -15,10 +16,23 @@ class SolutionsController < Decidim::ApplicationController
   def index
     @solutions = search
                      .results
-                     .published
                      .includes(:sd_goal)
                      # .includes(:category)
     @solutions = paginate(@solutions)
+  end
+
+  def new
+    @solution = Solution.new
+  end
+
+  def create
+    @solution = Solution.new( solution_params )
+    if @solution.save
+        flash[:success] = I18n.t("solutions.success")
+        redirect_to solutions_path
+      else
+        render :new
+      end
   end
 
   private
@@ -60,5 +74,9 @@ class SolutionsController < Decidim::ApplicationController
 
   def current_component
     @current_component||= current_participatory_space.components.where.not(published_at: nil).last
+  end
+
+  def solution_params
+    params.require(:solution).permit(:title, :description, :youtube_link, :github_link, :web_url, :android_mkt_url, :ios_mkt_url, :sd_goal_id, :team_name, :user_id)
   end
 end
