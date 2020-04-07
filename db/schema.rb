@@ -1500,7 +1500,7 @@ ActiveRecord::Schema.define(version: 2020_04_06_211905) do
     t.index ["uid"], name: "index_oauth_applications_on_uid", unique: true
   end
 
-  create_table "ods", force: :cascade do |t|
+  create_table "sd_goals", force: :cascade do |t|
     t.jsonb "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -1511,16 +1511,16 @@ ActiveRecord::Schema.define(version: 2020_04_06_211905) do
     t.text "description"
     t.text "youtube_link"
     t.string "github_link"
-    t.bigint "decidim_category_id"
     t.string "web_url"
     t.string "android_mkt_url"
     t.string "ios_mkt_url"
-    t.bigint "ods_id"
+    t.bigint "sd_goal_id"
+    t.string "team_name"
+    t.string "responsible_info"
     t.datetime "published_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["decidim_category_id"], name: "index_solutions_on_decidim_category_id"
-    t.index ["ods_id"], name: "index_solutions_on_ods_id"
+    t.index ["sd_goal_id"], name: "index_solutions_on_sd_goal_id"
     t.index ["title"], name: "index_solutions_on_title"
   end
 
@@ -1563,6 +1563,5 @@ ActiveRecord::Schema.define(version: 2020_04_06_211905) do
   add_foreign_key "oauth_access_tokens", "decidim_users", column: "resource_owner_id"
   add_foreign_key "oauth_access_tokens", "oauth_applications", column: "application_id"
   add_foreign_key "oauth_applications", "decidim_organizations"
-  add_foreign_key "solutions", "decidim_categories"
-  add_foreign_key "solutions", "ods", column: "ods_id"
+  add_foreign_key "solutions", "sd_goals"
 end

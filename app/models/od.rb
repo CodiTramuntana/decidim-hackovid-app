@@ -1,2 +1,0 @@
-class Od < ApplicationRecord
-end

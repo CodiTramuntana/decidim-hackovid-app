@@ -16,8 +16,8 @@ class SolutionsController < Decidim::ApplicationController
     @solutions = search
                      .results
                      .published
-                     .includes(:category)
-                     .includes(:ods)
+                     .includes(:sd_goal)
+                     # .includes(:category)
     @solutions = paginate(@solutions)
   end
 
