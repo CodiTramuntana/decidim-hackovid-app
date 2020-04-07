@@ -1,8 +1,17 @@
 ca:
-  activemodel:
+  activerecord:
     attributes:
       solution:
+        description: Descripció
         title: Títol
+        youtube_link: Enllaç a Youtube
+        github_link: Enllaç al repositori del projecte
+        web_url: URL del lloc web
+        android_mkt_url: URL de l'App en el market Android
+        ios_mkt_url: URL de l'App en el market d'Apple
+        sd_goal_id: Objectiu de Desenvolupament Global
+        team_name: Nom de l'equip
+        user: Usuari
   decidim:
     pages:
       home:
