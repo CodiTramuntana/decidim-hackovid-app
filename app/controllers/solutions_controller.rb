@@ -69,11 +69,11 @@ class SolutionsController < Decidim::ApplicationController
   end
 
   def current_participatory_space
-    @current_participatory_space||= ::Decidim::ParticipatoryProcess.find_by_slug("solucions-hackovid") || ::Decidim::ParticipatoryProcess.last
+    @current_participatory_space||= ::Decidim::ParticipatoryProcess.find_by_slug("solucions-hackovid") || ::Decidim::ParticipatoryProcess.first
   end
 
   def current_component
-    @current_component||= current_participatory_space.components.where.not(published_at: nil).last
+    @current_component||= current_participatory_space.components.where.not(published_at: nil).where(manifest_name: 'proposals').first
   end
 
   def solution_params
