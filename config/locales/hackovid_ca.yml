@@ -4,7 +4,7 @@ ca:
       solution:
         description: Descripció
         title: Títol
-        youtube_link: ID del Vídeo a Youtube
+        youtube_link: "ID del Vídeo a Youtube. Ex: Entrar l'ID en negreta. https://www.youtube.com/watch?v=<strong>XxXXXxXXXx</strong>"
         github_link: Enllaç al repositori del projecte
         web_url: URL del lloc web
         android_mkt_url: URL de l'App en el market Android
@@ -30,6 +30,7 @@ ca:
       category: Categoria
       search: Cerca
     index:
+      comming_soon: Disponible en breu
       new_solution: "Nova solució"
       solutions_count: "%{count} Solucions"
       github_link: Codi font
@@ -39,5 +40,6 @@ ca:
       created_at: "Data de publicació"
     new:
       new_solution: "Nova solució"
+      proposals: "Necessitats relacionades"
       publish: "Publicar Solució"
     success: "S'ha publicat correctament la solució."

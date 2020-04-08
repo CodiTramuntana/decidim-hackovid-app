@@ -13,3 +13,15 @@
 //= require rails-ujs
 //= require_tree .
 //= require decidim
+//= require select2-full
+
+$(document).ready(function() {
+  $("#proposals-select2").select2({
+        maximumSelectionLength: 3
+    });
+
+    $('#solutions .ods-image-form').click(function () {
+        var alt = $(this).attr("alt");
+        $('#solution_sd_goal_id').val(alt);
+    });
+});

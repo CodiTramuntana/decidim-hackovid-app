@@ -9,13 +9,14 @@
   .card__content{
     .card__title{ color: #599aa6; }
     .author__name{ color: #599aa6; padding-bottom: 10px; }
-    .solution-desc{}
+    .solution-desc{ clear: both; margin-top: 10px; text-align: justify; }
     .solution-youtube{ margin-top: 10px; }
     .solution-github{
       float: left;
+      margin-bottom: 10px;
       img{ width: 20px; height: 20px; }
     }
-    .link-apps__cards{ float: right; text-align: right; }
+    .link-apps__cards{ float: right; text-align: right; margin-bottom: 10px; }
     .solution-ods-card{
       clear: both;
       text-align: center;

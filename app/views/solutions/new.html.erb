@@ -1,40 +1,54 @@
-<div class="row columns">
-  <div class="title-action">
-    <h2 class="title-action__title section-heading">
-      <%= t(".new_solution") %>
-    </h2>
+<main class="wrapper">
+  <div class="row columns">
+    <div class="title-action">
+      <h2 class="title-action__title section-heading">
+        <%= t(".new_solution") %>
+      </h2>
+    </div>
   </div>
-</div>
-<div class="row">
-  <div id="solutions" class="columns mediumlarge-8 large-9">
-    <%= decidim_form_for(@solution, url: solutions_path, html: { class: "form" }) do |form| %>
-      <div class="card">
-        <div class="card-section">
+  <div class="row">
+    <div id="solutions" class="columns mediumlarge-8 large-9">
+      <%= decidim_form_for(@solution, url: solutions_path, html: { class: "form" }) do |form| %>
+        <div class="card">
+          <div class="card-section">
 
-        <%= form.text_field :title %>
-        <%= form.text_area :description %>
-        <%= form.text_field :youtube_link %>
-        <%= form.url_field :github_link %>
-        <%= form.url_field :web_url %>
-        <%= form.url_field :android_mkt_url %>
-        <%= form.url_field :ios_mkt_url %>
+          <%= form.text_field :title %>
+          <%= form.text_area :description %>
+          <%= form.text_field :youtube_link %>
+          <%= form.url_field :github_link %>
+          <%= form.url_field :web_url %>
+          <%= form.url_field :android_mkt_url %>
+          <%= form.url_field :ios_mkt_url %>
 
-        <% ods_options = SDGoal.all.map { |ods| [ods.try(:id).to_s + ". " + translated_attribute(ods.name), ods.id] } %>
-        <%= form.select(:sd_goal_id, options_for_select(ods_options)) %>
+          <% ods_options = SDGoal.all.map { |ods| [ods.try(:id).to_s + ". " + translated_attribute(ods.name), ods.id] } %>
+          <%= form.select(:sd_goal_id, options_for_select(ods_options)) %>
 
-        <% ods_options.each_with_index do |od_option| %>
-          <% ods_id = od_option[1] %>
+          <% ods_options.each_with_index do |od_option| %>
+            <% ods_id = od_option[1] %>
+            <%= image_tag "ods/#{locale.to_s}/ODS #{ods_id}.jpg", alt: "#{ods_id}", title: "#{od_option[0]}" , class: "ods-image-form" %>
+          <% end %>
+          <div class="solution-space-form"></div>
+          <%= form.text_field :team_name %>
+          <%= form.hidden_field :user, value: current_user.id %>
 
-          <%= image_tag "ods/#{locale.to_s}/ODS #{ods_id}.jpg", alt: "#{od_option[0]}", title: "#{od_option[0]}" , class: "ods-image-form" %>
-        <% end %>
-        <div class="solution-space-form"></div>
-        <%= form.text_field :team_name %>
-        <%= form.hidden_field :user, value: current_user.id %>
+          <% proposals = Decidim::Proposals::Proposal.published.not_hidden.where(component: current_component).all %>
 
+          <label for="solution_proposals"><%= t(".proposals") %>
+            <select id="proposals-select2" name="solution[proposals]" multiple="multiple" required>
+              <% proposals.map{ |p| [p.title, p.id] }.each do |proposal_option| %>
+                <% option_title = proposal_option[0] %>
+                <% option_value = proposal_option[1] %>
+                <option value="<%= option_value %>"><%= option_title %></option>
+              <% end %>
+            </select>
+          </label>
 
-        <%= form.submit t(".publish") %>
+          <div class="solution-space-form"></div>
+          <div class="solution-space-form"></div>
+          <%= form.submit t(".publish") %>
+          </div>
         </div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
 </div>
