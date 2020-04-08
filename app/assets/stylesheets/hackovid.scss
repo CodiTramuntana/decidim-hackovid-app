@@ -5,3 +5,15 @@
     }
   }
 }
+.card--solution{
+  .card__content{
+    .card__title{ color: #599aa6; }
+    .author__name{ color: #599aa6; padding-bottom: 10px; }
+    .solution-desc{}
+    .solution-youtube{ margin-top: 10px; }
+    .solution-github{
+      img{ width: 20px; height: 20px; }
+    }
+    .link-apps__cards{ text-align: right; }
+  }
+}

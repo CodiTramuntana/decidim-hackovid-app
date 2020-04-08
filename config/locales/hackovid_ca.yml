@@ -4,7 +4,7 @@ ca:
       solution:
         description: Descripció
         title: Títol
-        youtube_link: Enllaç a Youtube
+        youtube_link: ID del Vídeo a Youtube
         github_link: Enllaç al repositori del projecte
         web_url: URL del lloc web
         android_mkt_url: URL de l'App en el market Android
@@ -24,12 +24,18 @@ ca:
           developer_explanation: "Uneix-te a la Hackovid i aporta solucions a les necessitats de la ciutadania durant el confinament."
           how_to_participate_to_hackovid: "Participa a la Hackovid!"
   solutions:
+    errors:
+      external_apps_present: "Cal que indiquis almenys un dels enllaços següents: web o Market Places (Android o IOS)."
     filters:
       category: Categoria
       search: Cerca
     index:
       new_solution: "Nova solució"
       solutions_count: "%{count} Solucions"
+      github_link: Repositori del projecte
+      web_url: Web
+      android_mkt_url: Android
+      ios_mkt_url: Apple
     new:
       new_solution: "Nova solució"
       publish: "Publicar Solució"

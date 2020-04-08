@@ -1,0 +1,46 @@
+<div class="column" id="">
+  <article class="card card--solution muted">
+    <div class="card__content">
+      <h5 class="card__title">
+        <%= @model.title %>
+      </h5>
+      <div><span class="author__name"><%= @model.team_name %></span></div>
+      <div><span class="solution-desc"><%= @model.description %></span></div>
+      <div class="solution-youtube">
+        <iframe width="100%" height="100%" src="//www.youtube.com/embed/<%= @model.youtube_link %>"></iframe>
+      </div>
+
+      <div class="solution-github">
+        <a href="<%= @model.github_link %>" target="_blank">
+          <%= image_tag "GitHub-Mark-32px.png" %> <%= t("solutions.index.github_link") %>
+        </a>
+      </div>
+      <% if @model.web_url.present? %>
+      <div class="link-apps__cards">
+        <a href="<%= @model.web_url %>" target="_blank">
+          <%= icon("paperclip", class: "icon--small") %> <%= t("solutions.index.web_url") %>
+        </a>
+      </div>
+      <% end %>
+      <% if @model.android_mkt_url.present? %>
+      <div class="link-apps__cards">
+        <a href="<%= @model.android_mkt_url %>" target="_blank">
+          <%= icon("paperclip", class: "icon--small") %> <%= t("solutions.index.android_mkt_url") %>
+        </a>
+      </div>
+      <% end %>
+      <% if @model.ios_mkt_url.present? %>
+      <div class="link-apps__cards">
+        <a href="<%= @model.ios_mkt_url %>" target="_blank">
+          <%= icon("paperclip", class: "icon--small") %> <%= t("solutions.index.ios_mkt_url") %>
+        </a>
+      </div>
+      <% end %>
+    </div>
+    <div class="card__status">
+      <ul class="card-data">
+        <li class="card-data__item creation_date_status"><%= @model.created_at.strftime("%d/%m/%Y") %></li>
+      </ul>
+    </div>
+  </article>
+</div>

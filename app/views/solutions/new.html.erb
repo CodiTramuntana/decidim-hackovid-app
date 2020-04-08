@@ -14,10 +14,10 @@
         <%= form.text_field :title %>
         <%= form.text_area :description %>
         <%= form.text_field :youtube_link %>
-        <%= form.text_field :github_link %>
-        <%= form.text_field :web_url %>
-        <%= form.text_field :android_mkt_url %>
-        <%= form.text_field :ios_mkt_url %>
+        <%= form.url_field :github_link %>
+        <%= form.url_field :web_url %>
+        <%= form.url_field :android_mkt_url %>
+        <%= form.url_field :ios_mkt_url %>
         <%= form.select(:sd_goal_id, options_for_select(SDGoal.all.map { |ods| [translated_attribute(ods.name), ods.id] })) %>
         <%= form.text_field :team_name %>
         <%= form.hidden_field :user, value: current_user.id %>
