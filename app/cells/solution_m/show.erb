@@ -15,32 +15,43 @@
           <%= image_tag "GitHub-Mark-32px.png" %> <%= t("solutions.index.github_link") %>
         </a>
       </div>
-      <% if @model.web_url.present? %>
       <div class="link-apps__cards">
+        <% if @model.web_url.present? %>
         <a href="<%= @model.web_url %>" target="_blank">
-          <%= icon("paperclip", class: "icon--small") %> <%= t("solutions.index.web_url") %>
+          &nbsp;<%= icon("paperclip", class: "icon--small") %> <%= t("solutions.index.web_url") %>
         </a>
-      </div>
-      <% end %>
-      <% if @model.android_mkt_url.present? %>
-      <div class="link-apps__cards">
+        <% end %>
+        <% if @model.android_mkt_url.present? %>
         <a href="<%= @model.android_mkt_url %>" target="_blank">
-          <%= icon("paperclip", class: "icon--small") %> <%= t("solutions.index.android_mkt_url") %>
+          &nbsp;<%= icon("paperclip", class: "icon--small") %> <%= t("solutions.index.android_mkt_url") %>
         </a>
-      </div>
-      <% end %>
-      <% if @model.ios_mkt_url.present? %>
-      <div class="link-apps__cards">
+        <% end %>
+        <% if @model.ios_mkt_url.present? %>
         <a href="<%= @model.ios_mkt_url %>" target="_blank">
-          <%= icon("paperclip", class: "icon--small") %> <%= t("solutions.index.ios_mkt_url") %>
+          &nbsp;<%= icon("paperclip", class: "icon--small") %> <%= t("solutions.index.ios_mkt_url") %>
         </a>
+        <% end %>
       </div>
-      <% end %>
     </div>
     <div class="card__status">
       <ul class="card-data">
-        <li class="card-data__item creation_date_status"><%= @model.created_at.strftime("%d/%m/%Y") %></li>
+        <li class="card-data__item creation_date_status">
+          <div class="solution-ods-card">
+            <%= image_tag "ods/#{I18n.locale.to_s}/ODS #{@model.sd_goal_id}.jpg", alt: "#{translated_attribute(SDGoal.find(@model.sd_goal_id).name)}", title: "#{translated_attribute(SDGoal.find(@model.sd_goal_id).name)}" , class: "ods-image-list" %>
+          </div>
+        </li>
+        <li class="card-data__item creation_date_status">
+          <div style="margin-top: 10px; margin-bottom: 15px; text-transform: none">
+            <%= t("solutions.index.created_at") %>
+          </div>
+          <%= @model.created_at.strftime("%d/%m/%Y") %>
+        </li>
       </ul>
     </div>
+    <div class="card__footer">
+<!-- TODO: Llistar necessitats relacionades -->
+
+    </div>
+
   </article>
 </div>

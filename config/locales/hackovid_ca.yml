@@ -9,7 +9,7 @@ ca:
         web_url: URL del lloc web
         android_mkt_url: URL de l'App en el market Android
         ios_mkt_url: URL de l'App en el market d'Apple
-        sd_goal_id: Objectiu de Desenvolupament Global
+        sd_goal_id: Objectiu de Desenvolupament Sostenible (ODS)
         team_name: Nom de l'equip
         user: Usuari
   decidim:
@@ -32,10 +32,11 @@ ca:
     index:
       new_solution: "Nova solució"
       solutions_count: "%{count} Solucions"
-      github_link: Repositori del projecte
+      github_link: Codi font
       web_url: Web
       android_mkt_url: Android
       ios_mkt_url: Apple
+      created_at: "Data de publicació"
     new:
       new_solution: "Nova solució"
       publish: "Publicar Solució"

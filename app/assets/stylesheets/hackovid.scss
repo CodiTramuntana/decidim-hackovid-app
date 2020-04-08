@@ -12,8 +12,16 @@
     .solution-desc{}
     .solution-youtube{ margin-top: 10px; }
     .solution-github{
+      float: left;
       img{ width: 20px; height: 20px; }
     }
-    .link-apps__cards{ text-align: right; }
+    .link-apps__cards{ float: right; text-align: right; }
+    .solution-ods-card{
+      clear: both;
+      text-align: center;
+    }
   }
 }
+.ods-image-form { width: 64px; margin-bottom: 2px; }
+.solution-space-form {clear: both; display: block; margin: 10px; }
+.ods-image-list { width: 64px; text-align: left;}
