@@ -9,6 +9,13 @@
         <%= t(".new_solution") %>
         <%= icon "plus" %>
       <% end %>
+      <% if current_user.admin? %>
+        &nbsp;
+        <%= action_authorized_link_to :create, export_solutions_path, class: "title-action__action button small" do %>
+          <%= t(".export") %>
+          <%= icon "arrow-bottom" %>
+        <% end %>
+      <% end %>
     <% end %>
   </div>
 </div>

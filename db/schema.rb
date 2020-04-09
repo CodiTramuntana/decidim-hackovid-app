@@ -1506,12 +1506,6 @@ ActiveRecord::Schema.define(version: 2020_04_09_091800) do
     t.index ["uid"], name: "index_oauth_applications_on_uid", unique: true
   end
 
-  create_table "ods", force: :cascade do |t|
-    t.jsonb "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "sd_goals", force: :cascade do |t|
     t.jsonb "name"
     t.datetime "created_at", null: false

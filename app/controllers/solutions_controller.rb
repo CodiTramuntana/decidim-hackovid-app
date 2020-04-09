@@ -36,6 +36,13 @@ class SolutionsController < Decidim::ApplicationController
     end
   end
 
+  def export
+    return head :forbidden unless current_user.admin?
+
+    rs= Decidim::Exporters.find_exporter('CSV').new(Solution.all, SolutionsSerializer).export
+    send_data(rs.read, filename: rs.filename('solucions'))
+  end
+
   private
 
   def search_klass

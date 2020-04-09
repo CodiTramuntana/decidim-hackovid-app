@@ -32,14 +32,15 @@ ca:
       category: Categoria
       search: Cerca
     index:
+      android_mkt_url: Android
       comming_soon: Disponible en breu
+      created_at: "Data de publicació"
+      export: Exporta
+      github_link: Codi font
+      ios_mkt_url: Apple
       new_solution: "Nova solució"
       solutions_count: "%{count} Solucions"
-      github_link: Codi font
       web_url: Web
-      android_mkt_url: Android
-      ios_mkt_url: Apple
-      created_at: "Data de publicació"
     new:
       new_solution: "Nova solució"
       proposals: "Necessitats relacionades"
