@@ -33,15 +33,7 @@
 
           <% proposals = Decidim::Proposals::Proposal.published.not_hidden.where(component: current_component).all %>
 
-          <label for="solution_proposals"><%= t(".proposals") %>
-            <select id="proposals-select2" name="solution[proposals]" multiple="multiple" required>
-              <% proposals.map{ |p| [p.title, p.id] }.each do |proposal_option| %>
-                <% option_title = proposal_option[0] %>
-                <% option_value = proposal_option[1] %>
-                <option value="<%= option_value %>"><%= option_title %></option>
-              <% end %>
-            </select>
-          </label>
+          <%= form.select :decidim_proposals_proposal_ids, options_for_select(proposals.map{ |p| [p.title, p.id] }, @solution.decidim_proposals_proposal_ids), {}, id: 'decidim_proposals_proposal_ids', multiple: true %>
 
           <div class="solution-space-form"></div>
           <div class="solution-space-form"></div>
@@ -51,4 +43,4 @@
       <% end %>
     </div>
   </div>
-</div>
+</main>

@@ -40,15 +40,14 @@
     <div class="card__status">
       <ul class="card-data">
         <li class="card-data__item creation_date_status">
-          <div class="solution-ods-card">
+          <div class="solution-ods-card" style="float: left; width: 20%;">
             <%= image_tag "ods/#{I18n.locale.to_s}/ODS #{@model.sd_goal_id}.jpg", alt: "#{translated_attribute(SDGoal.find(@model.sd_goal_id).name)}", title: "#{translated_attribute(SDGoal.find(@model.sd_goal_id).name)}" , class: "ods-image-list" %>
           </div>
-        </li>
-        <li class="card-data__item creation_date_status">
-          <div style="margin-top: 10px; margin-bottom: 15px; text-transform: none">
-            <%= t("solutions.index.created_at") %>
+          <div class="solution-ods-card" style="float: right; width: 80%; text-align: justify; padding: 0 15px 0 5px;">
+            <% @model.decidim_proposals_proposals.each do |decidim_proposals_proposal| %>
+              <div style="clear: both; text-transform: none; margin-bottom: 10px;"><%= translated_attribute( decidim_proposals_proposal.try(:category).try(:name) || "" ) %></div>
+            <% end %>
           </div>
-          <%= @model.created_at.strftime("%d/%m/%Y") %>
         </li>
       </ul>
     </div>

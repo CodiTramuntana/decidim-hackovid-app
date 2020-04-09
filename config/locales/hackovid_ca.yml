@@ -12,6 +12,7 @@ ca:
         sd_goal_id: Objectiu de Desenvolupament Sostenible (ODS)
         team_name: Nom de l'equip
         user: Usuari
+        decidim_proposals_proposal_ids: Necessitats
   decidim:
     pages:
       home:
@@ -26,6 +27,7 @@ ca:
   solutions:
     errors:
       external_apps_present: "Cal que indiquis almenys un dels enllaços següents: web o Market Places (Android o IOS)."
+      mandatory_proposals: "Cal indicar entre 1 i 3 necessitats."
     filters:
       category: Categoria
       search: Cerca

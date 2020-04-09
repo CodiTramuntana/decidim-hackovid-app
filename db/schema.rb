@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_06_211905) do
+ActiveRecord::Schema.define(version: 2020_04_09_091800) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
@@ -1126,6 +1126,12 @@ ActiveRecord::Schema.define(version: 2020_04_06_211905) do
     t.index ["state"], name: "index_decidim_proposals_proposals_on_state"
   end
 
+  create_table "decidim_proposals_proposals_solutions", id: false, force: :cascade do |t|
+    t.bigint "solution_id", null: false
+    t.bigint "decidim_proposals_proposal_id", null: false
+    t.index ["solution_id", "decidim_proposals_proposal_id"], name: "index_solution_proposal"
+  end
+
   create_table "decidim_proposals_valuation_assignments", force: :cascade do |t|
     t.bigint "decidim_proposal_id", null: false
     t.string "valuator_role_type", null: false
@@ -1498,6 +1504,12 @@ ActiveRecord::Schema.define(version: 2020_04_06_211905) do
     t.boolean "confidential", default: true, null: false
     t.index ["decidim_organization_id"], name: "index_oauth_applications_on_decidim_organization_id"
     t.index ["uid"], name: "index_oauth_applications_on_uid", unique: true
+  end
+
+  create_table "ods", force: :cascade do |t|
+    t.jsonb "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "sd_goals", force: :cascade do |t|

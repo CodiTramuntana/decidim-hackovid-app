@@ -26,6 +26,7 @@ class SolutionsController < Decidim::ApplicationController
 
   def create
     @solution = Solution.new( solution_params )
+
     @solution.user= current_user
     if @solution.save
       flash[:success] = I18n.t("solutions.success")
@@ -77,6 +78,6 @@ class SolutionsController < Decidim::ApplicationController
   end
 
   def solution_params
-    params.require(:solution).permit(:title, :description, :youtube_link, :github_link, :web_url, :android_mkt_url, :ios_mkt_url, :sd_goal_id, :team_name, :user_id)
+    params.require(:solution).permit(:title, :description, :youtube_link, :github_link, :web_url, :android_mkt_url, :ios_mkt_url, :sd_goal_id, :team_name, :user_id, decidim_proposals_proposal_ids:[])
   end
 end

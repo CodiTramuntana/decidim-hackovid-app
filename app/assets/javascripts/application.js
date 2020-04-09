@@ -16,7 +16,7 @@
 //= require select2-full
 
 $(document).ready(function() {
-  $("#proposals-select2").select2({
+  $("#decidim_proposals_proposal_ids").select2({
         maximumSelectionLength: 3
     });
 
