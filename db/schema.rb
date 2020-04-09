@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_09_091800) do
+ActiveRecord::Schema.define(version: 2020_04_09_161500) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
@@ -1506,6 +1506,12 @@ ActiveRecord::Schema.define(version: 2020_04_09_091800) do
     t.index ["uid"], name: "index_oauth_applications_on_uid", unique: true
   end
 
+  create_table "ods", force: :cascade do |t|
+    t.jsonb "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "sd_goals", force: :cascade do |t|
     t.jsonb "name"
     t.datetime "created_at", null: false
@@ -1525,6 +1531,12 @@ ActiveRecord::Schema.define(version: 2020_04_09_091800) do
     t.bigint "decidim_user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "explanation"
+    t.string "source_link"
+    t.string "file_file_name"
+    t.string "file_content_type"
+    t.integer "file_file_size"
+    t.datetime "file_updated_at"
     t.index ["decidim_user_id"], name: "index_solutions_on_decidim_user_id"
     t.index ["sd_goal_id"], name: "index_solutions_on_sd_goal_id"
     t.index ["title"], name: "index_solutions_on_title"

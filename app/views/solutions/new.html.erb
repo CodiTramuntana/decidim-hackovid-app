@@ -8,17 +8,20 @@
   </div>
   <div class="row">
     <div id="solutions" class="columns mediumlarge-8 large-9">
-      <%= decidim_form_for(@solution, url: solutions_path, html: { class: "form" }) do |form| %>
+      <%= decidim_form_for(@solution, url: solutions_path, html: { multipart: true, class: "form" }) do |form| %>
         <div class="card">
           <div class="card-section">
 
           <%= form.text_field :title %>
-          <%= form.text_area :description %>
+          <%= form.text_area :description, maxlength: 400 %>
+          <%= form.text_area :explanation, maxlength: 800 %>
           <%= form.text_field :youtube_link %>
           <%= form.url_field :github_link %>
           <%= form.url_field :web_url %>
           <%= form.url_field :android_mkt_url %>
           <%= form.url_field :ios_mkt_url %>
+          <%= form.url_field :source_link %>
+          <%= form.file_field :file %>
 
           <% ods_options = SDGoal.all.map { |ods| [ods.try(:id).to_s + ". " + translated_attribute(ods.name), ods.id] } %>
           <%= form.select(:sd_goal_id, options_for_select(ods_options)) %>

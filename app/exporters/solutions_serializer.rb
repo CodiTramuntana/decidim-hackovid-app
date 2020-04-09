@@ -18,33 +18,26 @@ class SolutionsSerializer < Decidim::Exporters::Serializer
       id: solution.id,
       title: solution.title,
       description: solution.description,
-      youtube_link: solution.youtube_link,
+      explanation: solution.explanation,
+      youtube_link: "https://www.youtube.com/watch?v=#{solution.youtube_link}",
       github_link: solution.github_link,
-      web_url: solution.web_url,
-      android_mkt_url: solution.android_mkt_url,
-      ios_mkt_url: solution.ios_mkt_url,
-      sd_goal_id: solution.sd_goal_id,
+      web_link: solution.web_url,
+      android_market_link: solution.android_mkt_url,
+      ios_market_link: solution.ios_mkt_url,
+      firebase_link: solution.source_link,
+      market_probe: solution.file_file_name,
+      ods: solution.sd_goal_id,
       team_name: solution.team_name,
       decidim_user_id: solution.decidim_user_id,
       created_at: solution.created_at,
       updated_at: solution.updated_at,
     }
     h[:categories]= solution.decidim_proposals_proposals.map do |p|
-      {
-        id: p.category.try(:id),
-        name: p.category.try(:name) || empty_translatable
-      }
+      translated_attribute(p.category.try(:name))
     end
-    h[:proposals]= solution.decidim_proposals_proposals.map do |p|
+    h[:necessitats]= solution.decidim_proposals_proposals.map do |p|
       presenter= Decidim::Proposals::ProposalPresenter.new(p)
-      {
-        id: p.id,
-        title: presenter.title,
-        category: {
-          id: p.category.try(:id),
-          name: p.category.try(:name) || empty_translatable
-        }
-      }
+      presenter.title
     end
     h
   end

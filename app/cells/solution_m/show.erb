@@ -44,9 +44,11 @@
             <%= image_tag "ods/#{I18n.locale.to_s}/ODS #{@model.sd_goal_id}.jpg", alt: "#{translated_attribute(SDGoal.find(@model.sd_goal_id).name)}", title: "#{translated_attribute(SDGoal.find(@model.sd_goal_id).name)}" , class: "ods-image-list" %>
           </div>
           <div class="solution-ods-card" style="float: right; width: 80%; text-align: left; padding: 0 15px 0 5px;">
-            <% @model.decidim_proposals_proposals.each do |decidim_proposals_proposal| %>
-              <div style="clear: both; text-transform: none; margin-bottom: 10px;"><%= icon("check", class: "icon--small") %>&nbsp; <%= translated_attribute( decidim_proposals_proposal.try(:category).try(:name) || "" ) %></div>
-            <% end %>
+            <ul class="tags tags--proposal">
+              <% @model.decidim_proposals_proposals.each do |decidim_proposals_proposal| %>
+                <li><a style="cursor: default;"><%= translated_attribute( decidim_proposals_proposal.try(:category).try(:name)) || "" %></a></li>
+              <% end %>
+            </ul>
           </div>
         </li>
       </ul>

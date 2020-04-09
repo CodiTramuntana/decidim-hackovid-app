@@ -7,17 +7,20 @@ class Solution < ApplicationRecord
   belongs_to :user, foreign_key: 'decidim_user_id', class_name: '::Decidim::User'
   has_and_belongs_to_many :decidim_proposals_proposals, association_foreign_key: 'decidim_proposals_proposal_id', class_name: '::Decidim::Proposals::Proposal'
 
-  validates :title, :description, :youtube_link, :github_link, :team_name, presence: true
+
+  has_attached_file :file, styles: { medium: "300x>", thumb: "100x>" }
+  validates_attachment :file, content_type: { content_type: [ 'image/png', 'image/jpeg', 'image/jpg', 'image/gif' ] }
+
+  validates :title, :description, :explanation, :youtube_link, :github_link, :team_name,  presence: true
   validates :decidim_proposals_proposal_ids, length: { minimum: 1, maximum: 3, message: I18n.t('solutions.errors.mandatory_proposals') }
 
-  # validate :external_apps_present, on: :create
+  validate :external_apps_present
 
   private
 
-  #
-  # def external_apps_present
-  #  if web_url.blank? and android_mkt_url.blank? and ios_mkt_url.blank?
-  #    errors[:base] << I18n.t('solutions.errors.external_apps_present')
-  #  end
-  # end
+  def external_apps_present
+   if web_url.blank? and android_mkt_url.blank? and ios_mkt_url.blank? and source_link.blank? and file_file_name.blank?
+     errors[:base] << I18n.t('solutions.errors.external_apps_present')
+   end
+  end
 end

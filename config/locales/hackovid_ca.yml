@@ -2,17 +2,20 @@ ca:
   activerecord:
     attributes:
       solution:
-        description: Descripció
+        description: Descripció (màx. 400 caràcters)
+        explanation: Explicació (màx. 800 caràcters)
         title: Títol
         youtube_link: "ID del Vídeo a Youtube. Ex: Entrar l'ID en negreta. https://www.youtube.com/watch?v=<strong>XxXXXxXXXx</strong>"
-        github_link: Enllaç al repositori del projecte
+        github_link: Enllaç al repositori GitHub del projecte
         web_url: URL del lloc web
         android_mkt_url: URL de l'App en el market Android
         ios_mkt_url: URL de l'App en el market d'Apple
+        source_link: "URL del Firebase"
         sd_goal_id: Objectiu de Desenvolupament Sostenible (ODS)
         team_name: Nom de l'equip
         user: Usuari
         decidim_proposals_proposal_ids: Necessitats
+        file: Justificant de publicació als markets
   decidim:
     pages:
       home:
@@ -26,7 +29,7 @@ ca:
           how_to_participate_to_hackovid: "Participa a la Hackovid!"
   solutions:
     errors:
-      external_apps_present: "Cal que indiquis almenys un dels enllaços següents: web o Market Places (Android o IOS)."
+      external_apps_present: "Cal que indiquis almenys un dels camps següents: Web, Market Places (Android o IOS), Firebase o Justificant de publicació."
       mandatory_proposals: "Cal indicar entre 1 i 3 necessitats."
     filters:
       category: Categoria

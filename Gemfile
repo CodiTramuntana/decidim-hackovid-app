@@ -21,6 +21,7 @@ gem 'decidim-conferences', DECIDIM_VERSION
 
 gem 'recaptcha', require: 'recaptcha/rails'
 gem "select2-rails"
+gem "paperclip", "~> 6.0.0"
 
 # use deface to decorate Decidim views unobtrusively
 gem 'deface'

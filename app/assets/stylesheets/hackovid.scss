@@ -14,16 +14,20 @@
     .solution-github{
       float: left;
       margin-bottom: 10px;
-      img{ width: 20px; height: 20px; }
+      img{ width: 32px; height: 32px; }
     }
-    .link-apps__cards{ float: right; text-align: right; margin-bottom: 10px; }
+    .link-apps__cards{
+      float: right;
+      margin-bottom: 10px;
+      img{ width: 32px; height: 32px; }
+    }
     .solution-ods-card{
       clear: both;
       text-align: center;
     }
   }
 }
-.ods-image-form { width: 64px; margin-bottom: 2px; cursor: pointer; }
+.ods-image-form { width: 64px; margin-bottom: 2px; cursor: pointer;}
 .solution-space-form {clear: both; display: block; margin: 10px; }
 .ods-image-list { width: 64px; text-align: left;}
 #solutions {
