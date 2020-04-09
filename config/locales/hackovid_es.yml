@@ -1,13 +1,51 @@
 es:
+  activerecord:
+    attributes:
+      solution:
+        description: Descripción (máx. 400 carácteres)
+        explanation: Explicación Arquitectura (máx. 800 carácteres)
+        title: Título
+        youtube_link: "ID del Vídeo en Youtube. Ej: Entrar el ID en negrita. https://www.youtube.com/watch?v=<strong>XxXXXxXXXx</strong>"
+        github_link: Enlace al repositorio GitHub del proyecto
+        web_url: URL del sitio web
+        android_mkt_url: URL de la App en el Market de Android
+        ios_mkt_url: URL de la App en el Market de Apple
+        source_link: "URL de Firebase"
+        sd_goal_id: Objetivo de Desarrollo Sostenible (ODS)
+        team_name: Nombre del equipo
+        user: Usuario
+        decidim_proposals_proposal_ids: Necesidades
+        file: Justificante de publicación a los Markets
   decidim:
     pages:
       home:
         extended:
           anyone: "ESTÉS DONDE ESTÉS"
-          anyone_explanation: "Descarga y comparte las soluciones que salgan de la hackatón con todas las personas que las puedan necessitar"
+          anyone_explanation: "Descarga y comparte las soluciones que salgan de la hackatón con todas las personas que las puedan necesitar"
           citizen: "SI ERES UNA CIUDADANA O CIUDADANO"
           citizen_explanation: "Vota las necesidades más urgentes que tienes durante el confinamiento y propón de nuevas"
           developer: "SI ERES DESARROLLADOR/A TIC"
-          developer_explanation: "Une-te a la Hackovid y aporta soluciones a las necesidades de la ciudadanía durante el confinamiento."
-          how_to_participate_to_hackovid: "Participa a la Hackovid!"
-          
+          developer_explanation: "Únete a la Hackovid y aporta soluciones a las necesidades de la ciudadanía durante el confinamiento."
+          how_to_participate_to_hackovid: "¡Participa a la Hackovid!"
+  solutions:
+    errors:
+      external_apps_present: "Tienes que indicar almenos uno de estos campos: Web, Market Places (Android o IOS), Firebase o Justificante de publicación."
+      mandatory_proposals: "Tienes que indicar entre 1 y 3 necesidades."
+    filters:
+      category: Categoría
+      search: Buscar
+    index:
+      android_mkt_url: Android
+      comming_soon: Disponible en breve
+      created_at: "Data de publicación"
+      export: Exporta
+      github_link: Código fuente
+      ios_mkt_url: Apple
+      new_solution: "Nueva solución"
+      solutions_count: "%{count} Soluciones"
+      web_url: Web
+    new:
+      new_solution: "Nueva solución"
+      proposals: "Necesidades relacionadas"
+      publish: "Publicar Solución"
+    success: "Se ha publicado correctamente la solución."
