@@ -12,7 +12,10 @@
         <div class="card">
           <div class="card-section">
             <%= render partial: 'form', locals: {form: form} %>
-            <%= form.submit t(".update") %>
+            <div class="button--double form-general-submit">
+              <%= form.submit t(".update") %>
+              <%= link_to "Cancel", solutions_path, class: "button hollow" %>
+            </div>
           </div>
         </div>
       <% end %>

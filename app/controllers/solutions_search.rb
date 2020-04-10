@@ -20,7 +20,7 @@ class SolutionsSearch < ::Searchlight::Search
     return query unless search_text.present?
 
     query
-      .where("solutions.title ILIKE ?", "%#{search_text}%")
+      .where("solutions.title ILIKE ? OR solutions.team_name ILIKE ?", "%#{search_text}%", "%#{search_text}%")
   end
 
   def search_category_id
