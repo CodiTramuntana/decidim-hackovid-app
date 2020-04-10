@@ -25,7 +25,7 @@
         </a>
       </div>
       <div class="link-apps__cards">
-        <% if @model.android_mkt_url.blank? and @model.android_mkt_url.blank? and @model.ios_mkt_url.blank? %>
+        <% if @model.web_url.blank? and @model.android_mkt_url.blank? and @model.ios_mkt_url.blank? %>
           <%= t("solutions.index.comming_soon") %>
         <% else %>
           <% if @model.web_url.present? %>
