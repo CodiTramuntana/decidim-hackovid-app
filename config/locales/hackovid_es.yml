@@ -31,7 +31,7 @@ es:
     edit:
       edit_solution: "Modifica la Solución"
       proposals: "Necesidades relacionadas"
-      edit: "Editar"
+      update: "Actualizar"
     errors:
       external_apps_present: "Tienes que indicar almenos uno de estos campos: Web, Market Places (Android o IOS), Firebase o Justificante de publicación."
       mandatory_proposals: "Tienes que indicar entre 1 y 3 necesidades."

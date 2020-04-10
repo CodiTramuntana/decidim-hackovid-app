@@ -40,6 +40,17 @@ class SolutionsController < Decidim::ApplicationController
     retrieve_solution
   end
 
+  def update
+    retrieve_solution
+
+    if @solution.update(solution_params)
+      flash[:success] = %(#{I18n.t("solutions.success")} "#{@solution.title}")
+      redirect_to solutions_path
+    else
+      render :edit
+    end
+  end
+
   def export
     return head :forbidden unless current_user.admin?
 
@@ -81,6 +92,6 @@ class SolutionsController < Decidim::ApplicationController
   end
 
   def retrieve_solution
-    Solution.find(params[:id])
+    @solution= Solution.find(params[:id])
   end
 end

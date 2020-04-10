@@ -31,7 +31,7 @@ ca:
     edit:
       edit_solution: "Modifica la Solució"
       proposals: "Necessitats relacionades"
-      edit: "Edita"
+      update: "Actualitza"
     errors:
       external_apps_present: "Cal que indiquis almenys un dels camps següents: Web, Market Places (Android o IOS), Firebase o Justificant de publicació."
       mandatory_proposals: "Cal indicar entre 1 i 3 necessitats."
