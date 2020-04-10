@@ -28,6 +28,10 @@ es:
           developer_explanation: "Únete a la Hackovid y aporta soluciones a las necesidades de la ciudadanía durante el confinamiento."
           how_to_participate_to_hackovid: "¡Participa a la Hackovid!"
   solutions:
+    edit:
+      edit_solution: "Modifica la Solución"
+      proposals: "Necesidades relacionadas"
+      edit: "Editar"
     errors:
       external_apps_present: "Tienes que indicar almenos uno de estos campos: Web, Market Places (Android o IOS), Firebase o Justificante de publicación."
       mandatory_proposals: "Tienes que indicar entre 1 y 3 necesidades."
