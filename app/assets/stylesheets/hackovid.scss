@@ -31,8 +31,12 @@
 .ods-image-filter { width: 76px; margin-bottom: 2px; cursor: pointer;}
 .solution-space-form {clear: both; display: block; margin: 10px; }
 .ods-image-list { width: 64px; text-align: left;}
+.proposals-by-solution-text { color: #aaa; margin-bottom: 10px; }
 #solutions {
   .form-error { margin-top: 0rem !important; }
+  .card {
+    .button { float: right; margin-bottom: 15px; margin-left: 10px; }
+  }
 }
 
 

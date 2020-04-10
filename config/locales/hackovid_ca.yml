@@ -5,7 +5,7 @@ ca:
         description: Descripció (màx. 400 caràcters)
         explanation: Explicació Arquitectura (màx. 800 caràcters)
         title: Títol
-        youtube_link: "ID del Vídeo a Youtube. Ex: Entrar l'ID en negreta. https://www.youtube.com/watch?v=<strong>XxXXXxXXXx</strong>"
+        youtube_link: "ID del Vídeo a Youtube. <strong>ATENCIÓ!:</strong> Entreu només l'ID en negreta. https://www.youtube.com/watch?v=<strong>XxXXXxXXXx</strong>"
         github_link: Enllaç al repositori GitHub del projecte
         web_url: URL del lloc web
         android_mkt_url: URL de l'App en el Market d'Android
@@ -14,7 +14,7 @@ ca:
         sd_goal_id: Objectiu de Desenvolupament Sostenible (ODS)
         team_name: Nom de l'equip
         user: Usuari
-        decidim_proposals_proposal_ids: Necessitats
+        decidim_proposals_proposal_ids: Necessitats que resol
         file: Justificant de publicació als Markets
   decidim:
     pages:
@@ -52,6 +52,7 @@ ca:
       new_solution: "Nova solució"
       proposals: "Necessitats relacionades"
       publish: "Publicar Solució"
+    proposals_by_solution: "Necessitats que resol:"
     success: "S'ha publicat correctament la solució."
     success_deleted: "S'ha eliminat correctament la solució."
     error: "Hi ha algun problema amb aquesta acció."

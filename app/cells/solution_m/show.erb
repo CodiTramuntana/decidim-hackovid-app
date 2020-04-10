@@ -65,6 +65,9 @@
     </div>
     <div class="card__footer">
       <div class="card__support">
+        <div class="proposals-by-solution-text">
+          <%= t("solutions.proposals_by_solution") %>
+        </div>
         <% @model.decidim_proposals_proposals.each do |decidim_proposals_proposal| %>
           <a class="card__button button--sc light button small secondary" href="/processes/solucions-hackovid/f/86/proposals/<%= decidim_proposals_proposal.id %>" style="margin: 5px 0;">
             <%= translated_attribute(decidim_proposals_proposal.title) %>

@@ -5,7 +5,7 @@ es:
         description: Descripción (máx. 400 carácteres)
         explanation: Explicación Arquitectura (máx. 800 carácteres)
         title: Título
-        youtube_link: "ID del Vídeo en Youtube. Ej: Entrar el ID en negrita. https://www.youtube.com/watch?v=<strong>XxXXXxXXXx</strong>"
+        youtube_link: "ID del Vídeo en Youtube. <strong>¡ATENCIÓN!:</strong> Entrad solo el ID en negrita. https://www.youtube.com/watch?v=<strong>XxXXXxXXXx</strong>"
         github_link: Enlace al repositorio GitHub del proyecto
         web_url: URL del sitio web
         android_mkt_url: URL de la App en el Market de Android
@@ -14,7 +14,7 @@ es:
         sd_goal_id: Objetivo de Desarrollo Sostenible (ODS)
         team_name: Nombre del equipo
         user: Usuario
-        decidim_proposals_proposal_ids: Necesidades
+        decidim_proposals_proposal_ids: Necesidades que resuelve
         file: Justificante de publicación a los Markets
   decidim:
     pages:
@@ -52,6 +52,7 @@ es:
       new_solution: "Nueva solución"
       proposals: "Necesidades relacionadas"
       publish: "Publicar Solución"
+    proposals_by_solution: "Necesidades que resuelve:"
     success: "Se ha publicado correctamente la solución."
     success_deleted: "Se ha eliminado correctamente la solución."
     error: "Hay algún problema con esta acción."
