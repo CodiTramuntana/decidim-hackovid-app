@@ -5,3 +5,44 @@
     }
   }
 }
+.card--solution{
+  .card__content{
+    .card__title{ color: #599aa6; }
+    .author__name{ color: #599aa6; padding-bottom: 10px; }
+    .solution-desc{ clear: both; margin-top: 10px; text-align: justify; }
+    .solution-youtube{ margin-top: 10px; }
+    .solution-github{
+      float: left;
+      margin-bottom: 10px;
+      img{ width: 32px; height: 32px; }
+    }
+    .link-apps__cards{
+      float: right;
+      margin-bottom: 10px;
+      img{ width: 32px; height: 32px; }
+    }
+    .solution-ods-card{
+      clear: both;
+      text-align: center;
+    }
+  }
+}
+.ods-image-form { width: 64px; margin-bottom: 2px; cursor: pointer;}
+.ods-image-filter { width: 76px; margin-bottom: 2px; cursor: pointer;}
+.solution-space-form {clear: both; display: block; margin: 10px; }
+.ods-image-list { width: 64px; text-align: left;}
+.proposals-by-solution-text { color: #aaa; margin-bottom: 10px; }
+#solutions {
+  .form-error { margin-top: 0rem !important; }
+  .card {
+    .button { float: right; margin-bottom: 15px; margin-left: 10px; }
+  }
+}
+
+
+/**
+  * index form
+  */
+div.filters__section.sd-goals label.selected{
+  background-color: black;
+}

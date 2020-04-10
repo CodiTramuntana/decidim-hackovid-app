@@ -1,0 +1,21 @@
+<main class="wrapper">
+  <div class="row columns">
+    <div class="title-action">
+      <h2 class="title-action__title section-heading">
+        <%= t(".new_solution") %>
+      </h2>
+    </div>
+  </div>
+  <div class="row">
+    <div id="solutions" class="columns mediumlarge-8 large-9">
+      <%= decidim_form_for(@solution, url: solutions_path, html: { multipart: true, class: "form" }) do |form| %>
+        <div class="card">
+          <div class="card-section">
+            <%= render partial: 'form', locals: {form: form} %>
+            <%= form.submit t(".publish") %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</main>
