@@ -26,13 +26,6 @@ class SolutionsSearch < ::Searchlight::Search
   def search_category_id
     return query if category_ids.include?("all")
 
-    # proposal_ids= query.all.collect do |solution|
-    #   solution.decidim_proposals_proposals.where(
-    #     "id IN (SELECT categorizable_id FROM decidim_categorizations WHERE categorizable_type= ? AND decidim_category_id IN (?))",
-    #     ::Decidim::Proposals::Proposal,
-    #     all_category_ids).pluck(:id)
-    # end.flatten
-    # query.joins(:decidim_proposals_proposals).where("decidim_proposals_proposals.id IN (?)", proposal_ids)
     query
       .joins(decidim_proposals_proposals: :category)
       .where(
