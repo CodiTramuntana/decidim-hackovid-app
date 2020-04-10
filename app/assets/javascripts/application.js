@@ -32,18 +32,22 @@ $(document).ready(function() {
       $('#solution_sd_goal_id').val(alt);
   });
 
-  $('div.filters__section.sd-goals label input[type=checkbox]').change(function () {
-    var input= $(this)
-    alert(Object.keys(input))
-    alert(input.length)
-    alert($(input.first()))
-    alert(input.attr("checked"))
-    if (input.attr("checked") == "checked") {
-      alert("checked")
+  $('div.filters__section.sd-goals label input[type=checkbox]').each(function () {
+    var input= $(this);
+    if (input.is(":checked")) {
+      $(input).siblings("img").css("border", "3px solid #555");
     } else {
-      alert("unchecked")
+      $(input).siblings("img").css("border", "none");
     }
-  });
 
+    $(input).on("change", function () {
+      var input= $(this);
+      if (input.is(":checked")) {
+        $(input).siblings("img").css("border", "3px solid #555");
+      } else {
+        $(input).siblings("img").css("border", "none");
+      }
+    });
+  });
 
 });
