@@ -25,11 +25,11 @@
           <%= label_tag("filter_ods_ids_#{idx+1}", nil, style: "display: inline") do %>
             <input name="filter[ods_ids][<%= idx+1 %>]" type="hidden" value="0">
             <%= check_box_tag("filter[ods_ids][#{idx+1}]", 1, (filter.ods_ids[(idx+1).to_s] == '1'), style: 'display: none') %>
-            <%= image_tag "ods/#{locale.to_s}/ODS #{idx+1}.jpg", data: {}, title: "#{translated_attribute(sdg.name)}" , class: "ods-image-form" %>
+            <%= image_tag "ods/#{locale.to_s}/ODS #{idx+1}.jpg", data: {}, title: "#{translated_attribute(sdg.name)}" , class: "ods-image-filter" %>
           <% end %>
         <% end %>
       </div>
     </div>
-  </div>  
+  </div>
 <% end %>
 </div>
