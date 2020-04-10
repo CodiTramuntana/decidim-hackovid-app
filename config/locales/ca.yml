@@ -9,5 +9,7 @@ ca:
         render_endorsements_button_card_part:
           endorse: Adhereix-te
       proposals:
+        endorsement_identities_cabin:
+          endorse: Adherirme
         endorsements_card_row:
           comments: Comentaris

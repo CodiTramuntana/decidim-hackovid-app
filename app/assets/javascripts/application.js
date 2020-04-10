@@ -17,11 +17,20 @@
 
 $(document).ready(function() {
   $("#decidim_proposals_proposal_ids").select2({
-        maximumSelectionLength: 3
-    });
+      maximumSelectionLength: 3
+  });
 
-    $('#solutions .ods-image-form').click(function () {
-        var alt = $(this).attr("alt");
-        $('#solution_sd_goal_id').val(alt);
-    });
+  /* in the create form */
+  $('#solutions .ods-image-form').click(function () {
+      var alt = $(this).attr("alt");
+      $('#solution_sd_goal_id').val(alt);
+  });
+
+  /* in the filter form */
+  $('.new_filter .sd-goals .ods-image-form').click(function () {
+      var alt = $(this).attr("alt");
+      $('#solution_sd_goal_id').val(alt);
+  });
+
+
 });

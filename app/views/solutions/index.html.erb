@@ -11,7 +11,7 @@
       <% end %>
       <% if current_user.admin? %>
         &nbsp;
-        <%= action_authorized_link_to :create, export_solutions_path, class: "title-action__action button small" do %>
+        <%= action_authorized_link_to :create, export_solutions_path, class: "title-action__action button small", data: { "redirect_url" => new_solution_path } do %>
           <%= t(".export") %>
           <%= icon "arrow-bottom" %>
         <% end %>

@@ -23,7 +23,6 @@
           <%= form.url_field :source_link %>
           <%= form.file_field :file %>
 
-          <% ods_options = SDGoal.all.map { |ods| [ods.try(:id).to_s + ". " + translated_attribute(ods.name), ods.id] } %>
           <%= form.select(:sd_goal_id, options_for_select(ods_options)) %>
 
           <% ods_options.each_with_index do |od_option| %>

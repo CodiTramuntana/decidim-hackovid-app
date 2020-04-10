@@ -27,17 +27,18 @@ class SolutionsSerializer < Decidim::Exporters::Serializer
       firebase_link: solution.source_link,
       market_probe: solution.file_file_name,
       ods: solution.sd_goal_id,
+      ods_name: solution&.sd_goal.name,
       team_name: solution.team_name,
       decidim_user_id: solution.decidim_user_id,
+      decidim_user_nickname: solution&.user.nickname,
       created_at: solution.created_at,
       updated_at: solution.updated_at,
     }
     h[:categories]= solution.decidim_proposals_proposals.map do |p|
       translated_attribute(p.category.try(:name))
-    end
+    end.uniq
     h[:necessitats]= solution.decidim_proposals_proposals.map do |p|
-      presenter= Decidim::Proposals::ProposalPresenter.new(p)
-      presenter.title
+      Decidim::Proposals::ProposalPresenter.new(p).title
     end
     h
   end

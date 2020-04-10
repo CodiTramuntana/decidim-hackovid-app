@@ -15,4 +15,18 @@
   <% if current_component.categories.any? %>
     <%= form.check_boxes_tree :category_id, filter_categories_values, legend_title: t(".category") %>
   <% end %>
+
+  <div class="filters__section sd-goals">
+    <div class="filters__search">
+      <div class="input-group">
+        <% SDGoal.all.each_with_index do |sdg, idx| %>
+          <%= label_tag("filter_ods_ids_#{idx+1}", nil, style: "display: inline") do %>
+            <input name="filter[ods_ids][<%= idx+1 %>]" type="hidden" value="0">
+            <%= check_box_tag("filter[ods_ids][#{idx+1}]", 1, filter.ods_ids[idx+1] == '1') %>
+            <%= image_tag "ods/#{locale.to_s}/ODS #{idx+1}.jpg", data: {}, title: "#{translated_attribute(sdg.name)}" , class: "ods-image-form" %>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>  
 <% end %>
