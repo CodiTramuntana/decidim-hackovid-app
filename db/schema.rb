@@ -1531,7 +1531,7 @@ ActiveRecord::Schema.define(version: 2020_04_10_162930) do
     t.integer "file_file_size"
     t.datetime "file_updated_at"
     t.boolean "firebase_shared", default: false, null: false
-    t.string "firebase_name"
+    t.string "firebase_url"
     t.index ["decidim_user_id"], name: "index_solutions_on_decidim_user_id"
     t.index ["sd_goal_id"], name: "index_solutions_on_sd_goal_id"
     t.index ["title"], name: "index_solutions_on_title"

@@ -7,7 +7,7 @@ es:
         decidim_proposals_proposal_ids: Necesidades que resuelve
         file: Justificante de publicación a los Markets
         firebase_shared: Habéis compartido la App a través de Firebase App Distribution?
-        firebase_name: En caso afirmativo, con qué nombre?
+        firebase_url: En caso afirmativo indica la URL
         explanation: Explicación Arquitectura (máx. 800 carácteres)
         github_link: Enlace al repositorio GitHub del proyecto
         ios_mkt_url: URL de la App en el Market de Apple

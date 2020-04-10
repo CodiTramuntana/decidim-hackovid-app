@@ -5,7 +5,7 @@ class Solution < ApplicationRecord
   # has_one :category, through: :categorization, class_name: 'Decidim::Category'
   belongs_to :sd_goal, class_name: 'SDGoal'
   belongs_to :user, foreign_key: 'decidim_user_id', class_name: '::Decidim::User'
-  has_and_belongs_to_many :decidim_proposals_proposals, association_foreign_key: 'decidim_proposals_proposal_id', class_name: '::Decidim::Proposals::Proposal'
+  has_and_belongs_to_many :decidim_proposals_proposals, association_foreign_key: 'decidim_proposals_proposal_id', class_name: '::Decidim::Proposals::Proposal', dependent: :delete_all
 
 
   has_attached_file :file, styles: { medium: "300x>", thumb: "100x>" }
@@ -17,8 +17,7 @@ class Solution < ApplicationRecord
   validate :external_apps_present
   validates :youtube_link, format: { without: /\A(http[s]?\:\/\/)/,
     message: I18n.t('solutions.errors.youtube_link') }
-  validates :firebase_name, presence: true, if: :firebase_shared?
-  validates :firebase_name, length: { maximum: 30 }
+  validates :firebase_url, presence: true, if: :firebase_shared?
 
   private
 

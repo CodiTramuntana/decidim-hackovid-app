@@ -22,7 +22,7 @@
 <br />
 <br />
 <%= form.check_box :firebase_shared %>
-<%= form.text_field :firebase_name, maxlength: 30 %>
+<%= form.url_field :firebase_url %>
 <br />
 <%= form.select(:sd_goal_id, options_for_select(ods_options)) %>
 

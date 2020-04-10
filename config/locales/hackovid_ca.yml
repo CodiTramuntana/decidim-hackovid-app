@@ -8,7 +8,7 @@ ca:
         explanation: Explicació Arquitectura (màx. 800 caràcters)
         file: Justificant de publicació als Markets
         firebase_shared: Heu compartit l'aplicació a través de Firebase App Distribution?
-        firebase_name: En cas afirmatiu, amb quin nom?
+        firebase_url: En cas afirmatiu indica la URL
         github_link: Enllaç al repositori GitHub del projecte
         ios_mkt_url: URL de l'App en el Market d'Apple
         sd_goal_id: Objectiu de Desenvolupament Sostenible (ODS)

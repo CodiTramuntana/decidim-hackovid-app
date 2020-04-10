@@ -8,7 +8,7 @@ en:
         explanation: Architecture explanation (max. 800 chars)
         file: Market publication probe
         firebase_shared: Have you shared your App via Firebase App Distribution?
-        firebase_name: En cas afirmatiu, amb quin nom?
+        firebase_url: If yes, set the URL
         github_link: Link to project's GitHub repository
         ios_mkt_url: UURL to the App in the Apple Market
         sd_goal_id: Sustainable Development Goal (SDG/ODS)
