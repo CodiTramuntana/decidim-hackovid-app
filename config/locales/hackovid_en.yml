@@ -53,3 +53,5 @@ en:
       proposals: "Related Necessities"
       publish: "Publish Solution"
     success: "The Solution has been successfully published."
+    success_deleted: "The solution has been successfully deleted."
+    error: "There is a problem with this action."

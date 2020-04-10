@@ -53,3 +53,5 @@ es:
       proposals: "Necesidades relacionadas"
       publish: "Publicar Solución"
     success: "Se ha publicado correctamente la solución."
+    success_deleted: "Se ha eliminado correctamente la solución."
+    error: "Hay algún problema con esta acción."

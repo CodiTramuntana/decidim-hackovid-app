@@ -53,3 +53,5 @@ ca:
       proposals: "Necessitats relacionades"
       publish: "Publicar Solució"
     success: "S'ha publicat correctament la solució."
+    success_deleted: "S'ha eliminat correctament la solució."
+    error: "Hi ha algun problema amb aquesta acció."

@@ -51,6 +51,17 @@ class SolutionsController < Decidim::ApplicationController
     end
   end
 
+  def destroy
+    retrieve_solution
+
+    if @solution.destroy
+      flash[:success] = I18n.t("solutions.success_deleted")
+    else
+      flash[:error] = I18n.t("solutions.error")
+    end
+    redirect_to solutions_path
+  end
+
   def export
     return head :forbidden unless current_user.admin?
 
