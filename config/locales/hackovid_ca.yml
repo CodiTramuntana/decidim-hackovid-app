@@ -28,6 +28,8 @@ ca:
           developer_explanation: "Uneix-te a la Hackovid i aporta solucions a les necessitats de la ciutadania durant el confinament."
           how_to_participate_to_hackovid: "Participa a la Hackovid!"
   solutions:
+    count:
+      solutions_count: "%{count} Solucions"
     edit:
       edit_solution: "Modifica la Solució"
       proposals: "Necessitats relacionades"
@@ -35,6 +37,7 @@ ca:
     errors:
       external_apps_present: "Cal que indiquis almenys un dels camps següents: Web, Market Places (Android o IOS), Firebase o Justificant de publicació."
       mandatory_proposals: "Cal indicar entre 1 i 3 necessitats."
+      youtube_link: "Recorda que només has de posar la ID del vídeo de Youtube como s'ha indicat abans."
     filters:
       category: Categoria
       search: Cerca
@@ -46,8 +49,9 @@ ca:
       github_link: Codi font
       ios_mkt_url: Apple
       new_solution: "Nova solució"
-      solutions_count: "%{count} Solucions"
       web_url: Web
+    menu:
+      solutions: Solucions
     new:
       new_solution: "Nova solució"
       proposals: "Necessitats relacionades"

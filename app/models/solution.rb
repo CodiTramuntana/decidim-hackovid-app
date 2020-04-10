@@ -15,6 +15,8 @@ class Solution < ApplicationRecord
   validates :decidim_proposals_proposal_ids, length: { minimum: 1, maximum: 3, message: I18n.t('solutions.errors.mandatory_proposals') }
 
   validate :external_apps_present
+  validates :youtube_link, format: { without: /\A(http[s]?\:\/\/)/,
+    message: I18n.t('solutions.errors.youtube_link') }
 
   private
 

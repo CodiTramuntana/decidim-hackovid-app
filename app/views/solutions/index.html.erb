@@ -1,8 +1,8 @@
 <main class="wrapper">
 <div class="row columns">
   <div class="title-action">
-    <h2 id="proposals-count" class="title-action__title section-heading">
-      <%= t(".solutions_count", count: @solutions.total_count) %>
+    <h2 id="solutions-count" class="title-action__title section-heading">
+      <%= render partial: "count" %>
     </h2>
     <% if current_user %>
       <%= action_authorized_link_to :create, new_solution_path, class: "title-action__action button small", data: { "redirect_url" => new_solution_path } do %>
@@ -25,10 +25,10 @@
       <%= render partial: "filters" %>
     </div>
   </div>
-  <div id="proposals" class="columns mediumlarge-8 large-9">
+  <div id="solutions" class="columns mediumlarge-8 large-9">
     <%= render partial: "solutions" %>
   </div>
 </div>
-<%#= javascript_include_tag("decidim/filters") %>
-<%= javascript_include_tag "decidim/orders" %>
+<%= javascript_include_tag("decidim/filters") %>
+<%#= javascript_include_tag "decidim/orders" %>
 </main>

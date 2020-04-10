@@ -41,6 +41,11 @@ Rails.application.config.to_prepare do
               position: 3,
               if: Decidim::ParticipatoryProcess.where(organization: current_organization).published.any?,
               active: %r{^\/process(es|_groups)}
+
+    # menu.item I18n.t('menu.solutions', scope: 'solutions'),
+    #           '/solutions',
+    #           position: 4,
+    #           active: :inclusive
   end
 
   # make decorators available

@@ -28,6 +28,8 @@ es:
           developer_explanation: "Únete a la Hackovid y aporta soluciones a las necesidades de la ciudadanía durante el confinamiento."
           how_to_participate_to_hackovid: "¡Participa a la Hackovid!"
   solutions:
+    count:
+      solutions_count: "%{count} Soluciones"
     edit:
       edit_solution: "Modifica la Solución"
       proposals: "Necesidades relacionadas"
@@ -35,6 +37,7 @@ es:
     errors:
       external_apps_present: "Tienes que indicar almenos uno de estos campos: Web, Market Places (Android o IOS), Firebase o Justificante de publicación."
       mandatory_proposals: "Tienes que indicar entre 1 y 3 necesidades."
+      youtube_link: "Remember, you must only set the ID of the Youtube vide as shown above."
     filters:
       category: Categoría
       search: Buscar
@@ -48,6 +51,8 @@ es:
       new_solution: "Nueva solución"
       solutions_count: "%{count} Soluciones"
       web_url: Web
+    menu:
+      solutions: Solucione
     new:
       new_solution: "Nueva solución"
       proposals: "Necesidades relacionadas"

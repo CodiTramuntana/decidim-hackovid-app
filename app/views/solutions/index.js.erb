@@ -1,0 +1,8 @@
+var $solutions = $('#solutions');
+var $solutionsCount = $('#solutions-count');
+
+$solutions.html('<%= j(render partial: "solutions").strip.html_safe %>');
+$solutionsCount.html('<%= j(render partial: "count").strip.html_safe %>');
+
+var $dropdownMenu = $('.dropdown.menu', $solutions);
+$dropdownMenu.foundation();
