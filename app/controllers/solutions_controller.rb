@@ -99,7 +99,8 @@ class SolutionsController < Decidim::ApplicationController
   end
 
   def solution_params
-    params.require(:solution).permit(:title, :description, :explanation, :youtube_link, :github_link, :source_link, :web_url, :android_mkt_url, :ios_mkt_url, :sd_goal_id, :team_name, :user_id, :file, decidim_proposals_proposal_ids:[])
+    permitted= [:title, :description, :explanation, :youtube_link, :github_link, :firebase_shared, :firebase_name, :web_url, :android_mkt_url, :ios_mkt_url, :sd_goal_id, :team_name, :user_id, :file, decidim_proposals_proposal_ids:[]]
+    params.require(:solution).permit(*permitted)
   end
 
   def retrieve_solution

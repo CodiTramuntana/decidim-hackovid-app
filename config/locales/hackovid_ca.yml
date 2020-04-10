@@ -2,20 +2,21 @@ ca:
   activerecord:
     attributes:
       solution:
-        description: Descripció (màx. 400 caràcters)
-        explanation: Explicació Arquitectura (màx. 800 caràcters)
-        title: Títol
-        youtube_link: "ID del Vídeo a Youtube. <strong>ATENCIÓ!:</strong> Entreu només l'ID en negreta. https://www.youtube.com/watch?v=<strong>XxXXXxXXXx</strong>"
-        github_link: Enllaç al repositori GitHub del projecte
-        web_url: URL del lloc web
         android_mkt_url: URL de l'App en el Market d'Android
+        description: Descripció (màx. 400 caràcters)
+        decidim_proposals_proposal_ids: Necessitats que resol
+        explanation: Explicació Arquitectura (màx. 800 caràcters)
+        file: Justificant de publicació als Markets
+        firebase_shared: Heu compartit l'aplicació a través de Firebase App Distribution?
+        firebase_name: En cas afirmatiu, amb quin nom?
+        github_link: Enllaç al repositori GitHub del projecte
         ios_mkt_url: URL de l'App en el Market d'Apple
-        source_link: "URL del Firebase"
         sd_goal_id: Objectiu de Desenvolupament Sostenible (ODS)
         team_name: Nom de l'equip
+        title: Títol
         user: Usuari
-        decidim_proposals_proposal_ids: Necessitats que resol
-        file: Justificant de publicació als Markets
+        web_url: URL del lloc web
+        youtube_link: "ID del Vídeo a Youtube. <strong>ATENCIÓ!:</strong> Entreu només l'ID en negreta. https://www.youtube.com/watch?v=<strong>XxXXXxXXXx</strong>"
   decidim:
     pages:
       home:
@@ -37,7 +38,7 @@ ca:
     errors:
       external_apps_present: "Cal que indiquis almenys un dels camps següents: Web, Market Places (Android o IOS), Firebase o Justificant de publicació."
       mandatory_proposals: "Cal indicar entre 1 i 3 necessitats."
-      youtube_link: "Recorda que només has de posar la ID del vídeo de Youtube como s'ha indicat abans."
+      youtube_link: "Recorda que només has de posar la ID del vídeo de Youtube com s'ha indicat abans."
     filters:
       category: Categoria
       search: Cerca

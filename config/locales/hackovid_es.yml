@@ -2,20 +2,21 @@ es:
   activerecord:
     attributes:
       solution:
-        description: Descripción (máx. 400 carácteres)
-        explanation: Explicación Arquitectura (máx. 800 carácteres)
-        title: Título
-        youtube_link: "ID del Vídeo en Youtube. <strong>¡ATENCIÓN!:</strong> Entrad solo el ID en negrita. https://www.youtube.com/watch?v=<strong>XxXXXxXXXx</strong>"
-        github_link: Enlace al repositorio GitHub del proyecto
-        web_url: URL del sitio web
         android_mkt_url: URL de la App en el Market de Android
-        ios_mkt_url: URL de la App en el Market de Apple
-        source_link: "URL de Firebase"
-        sd_goal_id: Objetivo de Desarrollo Sostenible (ODS)
-        team_name: Nombre del equipo
-        user: Usuario
+        description: Descripción (máx. 400 carácteres)
         decidim_proposals_proposal_ids: Necesidades que resuelve
         file: Justificante de publicación a los Markets
+        firebase_shared: Habéis compartido la App a través de Firebase App Distribution?
+        firebase_name: En caso afirmativo, con qué nombre?
+        explanation: Explicación Arquitectura (máx. 800 carácteres)
+        github_link: Enlace al repositorio GitHub del proyecto
+        ios_mkt_url: URL de la App en el Market de Apple
+        sd_goal_id: Objetivo de Desarrollo Sostenible (ODS)
+        team_name: Nombre del equipo
+        title: Título
+        user: Usuario
+        web_url: URL del sitio web
+        youtube_link: "ID del Vídeo en Youtube. <strong>¡ATENCIÓN!:</strong> Entrad solo el ID en negrita. https://www.youtube.com/watch?v=<strong>XxXXXxXXXx</strong>"
   decidim:
     pages:
       home:
@@ -37,7 +38,7 @@ es:
     errors:
       external_apps_present: "Tienes que indicar almenos uno de estos campos: Web, Market Places (Android o IOS), Firebase o Justificante de publicación."
       mandatory_proposals: "Tienes que indicar entre 1 y 3 necesidades."
-      youtube_link: "Remember, you must only set the ID of the Youtube vide as shown above."
+      youtube_link: "Recuerda que sólo has de poner la ID del video de Youtube como se ha indicado anteriormente."
     filters:
       category: Categoría
       search: Buscar

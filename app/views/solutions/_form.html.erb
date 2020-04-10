@@ -7,7 +7,8 @@
 <%= form.url_field :web_url %>
 <%= form.url_field :android_mkt_url %>
 <%= form.url_field :ios_mkt_url %>
-<%= form.url_field :source_link %>
+<%= form.check_box :firebase_shared %>
+<%= form.text_field :firebase_name, maxlength: 30 %>
 <%= form.file_field :file %>
 <% if action_name == 'edit' %>
   <% if @solution.file_file_name.present? %>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_09_161500) do
+ActiveRecord::Schema.define(version: 2020_04_10_162930) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
@@ -1526,11 +1526,12 @@ ActiveRecord::Schema.define(version: 2020_04_09_161500) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "explanation"
-    t.string "source_link"
     t.string "file_file_name"
     t.string "file_content_type"
     t.integer "file_file_size"
     t.datetime "file_updated_at"
+    t.boolean "firebase_shared", default: false, null: false
+    t.string "firebase_name"
     t.index ["decidim_user_id"], name: "index_solutions_on_decidim_user_id"
     t.index ["sd_goal_id"], name: "index_solutions_on_sd_goal_id"
     t.index ["title"], name: "index_solutions_on_title"

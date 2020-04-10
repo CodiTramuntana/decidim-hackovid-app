@@ -2,20 +2,21 @@ en:
   activerecord:
     attributes:
       solution:
-        description: Description (max. 400 chars)
-        explanation: Architecture explanation (max. 800 chars)
-        title: Title
-        youtube_link: "YouTube video ID. <strong>ATTENTION!:</strong> Enter only the ID highlighted in bold: https://www.youtube.com/watch?v=<strong>XxXXXxXXXx</strong>"
-        github_link: Link to project's GitHub repository
-        web_url: Web site URL
         android_mkt_url: URL to the App in the Android Market
+        description: Description (max. 400 chars)
+        decidim_proposals_proposal_ids: Needs that solve
+        explanation: Architecture explanation (max. 800 chars)
+        file: Market publication probe
+        firebase_shared: Have you shared your App via Firebase App Distribution?
+        firebase_name: En cas afirmatiu, amb quin nom?
+        github_link: Link to project's GitHub repository
         ios_mkt_url: UURL to the App in the Apple Market
-        source_link: Firebase URL
         sd_goal_id: Sustainable Development Goal (SDG/ODS)
         team_name: Team name
+        title: Title
         user: User
-        decidim_proposals_proposal_ids: Needs that solve
-        file: Market publication probe
+        web_url: Web site URL
+        youtube_link: "YouTube video ID. <strong>ATTENTION!:</strong> Enter only the ID highlighted in bold: https://www.youtube.com/watch?v=<strong>XxXXXxXXXx</strong>"
   decidim:
     pages:
       home:
@@ -37,7 +38,7 @@ en:
     errors:
       external_apps_present: "At least one of the following fields must be setted: Web site URL, Market Places (Android o IOS), Firebase or publication probe."
       mandatory_proposals: "From 1 to 3 necessities should be selected."
-      youtube_link: "Recuerda que sólo has de poner la ID del video de Youtube como se ha indicado anteriormente."
+      youtube_link: "Remember, you must only set the ID of the Youtube vide as explained above."
     filters:
       category: Category
       search: Search

@@ -17,11 +17,13 @@ class Solution < ApplicationRecord
   validate :external_apps_present
   validates :youtube_link, format: { without: /\A(http[s]?\:\/\/)/,
     message: I18n.t('solutions.errors.youtube_link') }
+  validates :firebase_name, presence: true, if: :firebase_shared?
+  validates :firebase_name, length: { maximum: 30 }
 
   private
 
   def external_apps_present
-   if web_url.blank? and android_mkt_url.blank? and ios_mkt_url.blank? and source_link.blank? and file_file_name.blank?
+   if web_url.blank? and android_mkt_url.blank? and ios_mkt_url.blank? and file_file_name.blank?
      errors[:base] << I18n.t('solutions.errors.external_apps_present')
    end
   end
