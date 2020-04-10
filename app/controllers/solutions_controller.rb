@@ -36,6 +36,10 @@ class SolutionsController < Decidim::ApplicationController
     end
   end
 
+  def edit
+    retrieve_solution
+  end
+
   def export
     return head :forbidden unless current_user.admin?
 
@@ -74,5 +78,9 @@ class SolutionsController < Decidim::ApplicationController
 
   def solution_params
     params.require(:solution).permit(:title, :description, :explanation, :youtube_link, :github_link, :source_link, :web_url, :android_mkt_url, :ios_mkt_url, :sd_goal_id, :team_name, :user_id, :file, decidim_proposals_proposal_ids:[])
+  end
+
+  def retrieve_solution
+    Solution.find(params[:id])
   end
 end

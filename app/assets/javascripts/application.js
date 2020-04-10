@@ -32,5 +32,18 @@ $(document).ready(function() {
       $('#solution_sd_goal_id').val(alt);
   });
 
+  $('div.filters__section.sd-goals label input[type=checkbox]').change(function () {
+    var input= $(this)
+    alert(Object.keys(input))
+    alert(input.length)
+    alert($(input.first()))
+    alert(input.attr("checked"))
+    if (input.attr("checked") == "checked") {
+      alert("checked")
+    } else {
+      alert("unchecked")
+    }
+  });
+
 
 });

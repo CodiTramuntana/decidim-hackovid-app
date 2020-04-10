@@ -1,6 +1,11 @@
 <div class="column" id="">
   <article class="card card--solution muted">
     <div class="card__content">
+      <div style="text-align: right">
+        <%= link_to edit_solution_path(@model), class: "title-action__action button small", style: "background-color: grey" do %>
+          <%= icon "pencil" %>
+        <% end %>
+      </div>
       <h5 class="card__title">
         <%= @model.title %>
       </h5>
@@ -45,8 +50,8 @@
           </div>
           <div class="solution-ods-card" style="float: right; width: 80%; text-align: left; padding: 0 15px 0 5px;">
             <ul class="tags tags--proposal">
-              <% @model.decidim_proposals_proposals.each do |decidim_proposals_proposal| %>
-                <li><a style="cursor: default;"><%= translated_attribute( decidim_proposals_proposal.try(:category).try(:name)) || "" %></a></li>
+              <% @model.decidim_proposals_proposals.map {|p| p.category}.uniq.each do |category| %>
+                <li><a style="cursor: default;"><%= translated_attribute(category.try(:name)) || "" %></a></li>
               <% end %>
             </ul>
           </div>

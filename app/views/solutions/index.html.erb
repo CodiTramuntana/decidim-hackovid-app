@@ -13,7 +13,7 @@
         &nbsp;
         <%= action_authorized_link_to :create, export_solutions_path, class: "title-action__action button small", data: { "redirect_url" => new_solution_path } do %>
           <%= t(".export") %>
-          <%= icon "arrow-bottom" %>
+          <%= icon "data-transfer-download" %>
         <% end %>
       <% end %>
     <% end %>
@@ -29,6 +29,6 @@
     <%= render partial: "solutions" %>
   </div>
 </div>
-<%= javascript_include_tag("decidim/filters") %>
+<%#= javascript_include_tag("decidim/filters") %>
 <%= javascript_include_tag "decidim/orders" %>
 </main>

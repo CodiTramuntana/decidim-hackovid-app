@@ -1,4 +1,6 @@
-<%= filter_form_for filter do |form| %>
+<%#= filter_form_for filter do |form| %>
+<div class="filters">
+<%= form_for filter, namespace: "filters_#{SecureRandom.uuid}", builder: ::Decidim::FilterFormBuilder, url: url_for, as: :filter, method: :get, remote: false, html: { id: nil } do |form| %>
   <div class="filters__section">
     <div class="filters__search">
       <div class="input-group">
@@ -22,7 +24,7 @@
         <% SDGoal.all.each_with_index do |sdg, idx| %>
           <%= label_tag("filter_ods_ids_#{idx+1}", nil, style: "display: inline") do %>
             <input name="filter[ods_ids][<%= idx+1 %>]" type="hidden" value="0">
-            <%= check_box_tag("filter[ods_ids][#{idx+1}]", 1, filter.ods_ids[idx+1] == '1') %>
+            <%= check_box_tag("filter[ods_ids][#{idx+1}]", 1, (filter.ods_ids[(idx+1).to_s] == '1'), style: 'display: none') %>
             <%= image_tag "ods/#{locale.to_s}/ODS #{idx+1}.jpg", data: {}, title: "#{translated_attribute(sdg.name)}" , class: "ods-image-form" %>
           <% end %>
         <% end %>
@@ -30,3 +32,4 @@
     </div>
   </div>  
 <% end %>
+</div>
