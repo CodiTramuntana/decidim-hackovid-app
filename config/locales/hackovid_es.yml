@@ -42,6 +42,8 @@ es:
     filters:
       category: Categoría
       search: Buscar
+    form:
+      markets_callout: "Como mínimo uno de los siguientes 4 campos ha de estar rellenado:"
     index:
       android_mkt_url: Android
       comming_soon: Disponible en breve

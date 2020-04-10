@@ -42,6 +42,8 @@ ca:
     filters:
       category: Categoria
       search: Cerca
+    form:
+      markets_callout: "Com a mínim un dels següents 4 camps ha d'estar emplenat:"
     index:
       android_mkt_url: Android
       comming_soon: Disponible en breu

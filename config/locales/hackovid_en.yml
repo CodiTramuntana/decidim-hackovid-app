@@ -42,6 +42,8 @@ en:
     filters:
       category: Category
       search: Search
+    form:
+      markets_callout: "At least one of the folloing 4 fields must be filled:"
     index:
       android_mkt_url: Android
       comming_soon: Disponible en breu

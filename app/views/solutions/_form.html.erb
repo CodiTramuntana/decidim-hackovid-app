@@ -4,20 +4,26 @@
 <%= form.text_area :explanation, maxlength: 800 %>
 <%= form.text_field :youtube_link %>
 <%= form.url_field :github_link %>
+<br />
+<div class="flash callout secondary"><%= I18n.t("solutions.form.markets_callout") %></div>
+<fieldset>
 <%= form.url_field :web_url %>
 <%= form.url_field :android_mkt_url %>
 <%= form.url_field :ios_mkt_url %>
-<%= form.check_box :firebase_shared %>
-<%= form.text_field :firebase_name, maxlength: 30 %>
 <%= form.file_field :file %>
-<% if action_name == 'edit' %>
+<% if %W[edit update].include?(action_name) %>
   <% if @solution.file_file_name.present? %>
   <%= image_tag @solution.file.url %>
   <% else %>
   <i>No hi ha imatge del justificant</i>
   <% end %>
 <% end %>
-
+</fieldset>
+<br />
+<br />
+<%= form.check_box :firebase_shared %>
+<%= form.text_field :firebase_name, maxlength: 30 %>
+<br />
 <%= form.select(:sd_goal_id, options_for_select(ods_options)) %>
 
 <% ods_options.each_with_index do |od_option| %>
