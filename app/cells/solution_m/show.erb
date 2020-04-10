@@ -6,7 +6,7 @@
         <%= link_to edit_solution_path(@model), class: "title-action__action button small", style: "background-color: grey" do %>
           <%= icon "pencil" %>
         <% end %>
-        <%= link_to solution_path(@model), method: :delete, class: "title-action__action button small", style: "background-color: red" do %>
+        <%= link_to solution_path(@model), method: :delete, class: "title-action__action button small", style: "background-color: red", data: {confirm: "Are you sure?"} do %>
           <%= icon "trash" %>
         <% end %>
       </div>
