@@ -14,10 +14,10 @@ ca:
         representative_email: Correu electrònic del representant de l'equip
         representative_first_name: Nom del representant de l'equip
         representative_last_name: Cognoms del representant de l'equip
-        representative_phone_num: Mòbil del representant de l'equip
+        representative_phone_num: Mòbil del representant de l'equip (opcional)
         sd_goal_id: Objectiu de Desenvolupament Sostenible (ODS)
         team_name: Nom de l'equip
-        title: Títol
+        title: Títol de la solució
         user: Usuari
         web_url: URL del lloc web
         youtube_link: "ID del Vídeo a Youtube. <strong>ATENCIÓ!:</strong> Entreu només l'ID en negreta. https://www.youtube.com/watch?v=<strong>XxXXXxXXXx</strong>"
@@ -40,7 +40,7 @@ ca:
       proposals: "Necessitats relacionades"
       update: "Actualitza"
     errors:
-      external_apps_present: "Cal que indiquis almenys un dels camps següents: Web, Market Places (Android o IOS), Firebase o Justificant de publicació."
+      external_apps_present: "Cal que indiquis almenys un dels camps següents: Web, Market Places (Android o IOS) o Justificant de publicació."
       mandatory_proposals: "Cal indicar entre 1 i 3 necessitats."
       youtube_link: "Recorda que només has de posar la ID del vídeo de Youtube com s'ha indicat abans."
     filters:

@@ -14,10 +14,10 @@ en:
         representative_email: Representative's email
         representative_first_name: Representative's first name
         representative_last_name: Representative's last name
-        representative_phone_num: Representative's phone number
+        representative_phone_num: Representative's phone number (optional)
         sd_goal_id: Sustainable Development Goal (SDG/ODS)
         team_name: Team name
-        title: Title
+        title: Solution title
         user: User
         web_url: Web site URL
         youtube_link: "YouTube video ID. <strong>ATTENTION!:</strong> Enter only the ID highlighted in bold: https://www.youtube.com/watch?v=<strong>XxXXXxXXXx</strong>"
@@ -40,7 +40,7 @@ en:
       proposals: Related Necessities
       update: Update
     errors:
-      external_apps_present: "At least one of the following fields must be setted: Web site URL, Market Places (Android o IOS), Firebase or publication probe."
+      external_apps_present: "At least one of the following fields must be setted: Web site URL, Market Places (Android o IOS) or publication probe."
       mandatory_proposals: "From 1 to 3 necessities should be selected."
       youtube_link: "Remember, you must only set the ID of the Youtube vide as explained above."
     filters:

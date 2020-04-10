@@ -14,10 +14,10 @@ es:
         representative_email: Correo electrónico del representante del equipo
         representative_first_name: Nombre del representante del equipo
         representative_last_name: Apellidos del representante del equipo
-        representative_phone_num: Móvil del representante del equipo
+        representative_phone_num: Móvil del representante del equipo (opcional)
         sd_goal_id: Objetivo de Desarrollo Sostenible (ODS)
         team_name: Nombre del equipo
-        title: Título
+        title: Título de la solución
         user: Usuario
         web_url: URL del sitio web
         youtube_link: "ID del Vídeo en Youtube. <strong>¡ATENCIÓN!:</strong> Entrad solo el ID en negrita. https://www.youtube.com/watch?v=<strong>XxXXXxXXXx</strong>"
@@ -40,7 +40,7 @@ es:
       proposals: "Necesidades relacionadas"
       update: "Actualizar"
     errors:
-      external_apps_present: "Tienes que indicar almenos uno de estos campos: Web, Market Places (Android o IOS), Firebase o Justificante de publicación."
+      external_apps_present: "Tienes que indicar almenos uno de estos campos: Web, Market Places (Android o IOS) o Justificante de publicación."
       mandatory_proposals: "Tienes que indicar entre 1 y 3 necesidades."
       youtube_link: "Recuerda que sólo has de poner la ID del video de Youtube como se ha indicado anteriormente."
     filters:
