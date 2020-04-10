@@ -1,0 +1,80 @@
+<div class="column" id="">
+  <article class="card card--solution muted">
+    <div class="card__content">
+      <% if current_user.admin? %>
+      <div style="text-align: right">
+        <%= link_to edit_solution_path(@model), class: "title-action__action button small", style: "background-color: grey" do %>
+          <%= icon "pencil" %>
+        <% end %>
+        <%= link_to solution_path(@model), method: :delete, class: "title-action__action button small", style: "background-color: red", data: {confirm: "Are you sure?"} do %>
+          <%= icon "trash" %>
+        <% end %>
+      </div>
+      <% end %>
+      <h5 class="card__title">
+        <%= @model.title %>
+      </h5>
+      <div><span class="author__name"><%= @model.team_name %></span></div>
+      <div class="solution-youtube">
+        <iframe width="100%" height="100%" src="//www.youtube.com/embed/<%= @model.youtube_link %>"></iframe>
+      </div>
+
+      <div class="solution-github">
+        <a href="<%= @model.github_link %>" target="_blank">
+          <%= image_tag "icon_github.png", title: t("solutions.index.github_link") %>
+        </a>
+      </div>
+      <div class="link-apps__cards">
+        <% if @model.android_mkt_url.blank? and @model.android_mkt_url.blank? and @model.ios_mkt_url.blank? %>
+          <%= t("solutions.index.comming_soon") %>
+        <% else %>
+          <% if @model.web_url.present? %>
+          <a href="<%= @model.web_url %>" target="_blank">
+            &nbsp;<%= image_tag "icon_world.png", title: t("solutions.index.web_url") %>
+          </a>
+          <% end %>
+          <% if @model.android_mkt_url.present? %>
+          <a href="<%= @model.android_mkt_url %>" target="_blank">
+            &nbsp;<%= image_tag "icon_android.png", title: t("solutions.index.android_mkt_url") %>
+          </a>
+          <% end %>
+          <% if @model.ios_mkt_url.present? %>
+          <a href="<%= @model.ios_mkt_url %>" target="_blank">
+            &nbsp;<%= image_tag "icon_apple.png", title: t("solutions.index.ios_mkt_url") %>
+          </a>
+          <% end %>
+        <% end %>
+      </div>
+      <div class="solution-desc"><%= @model.description %></div>
+    </div>
+    <div class="card__status">
+      <ul class="card-data">
+        <li class="card-data__item creation_date_status">
+          <div class="solution-ods-card" style="float: left; width: 20%; padding: 0 15px;">
+            <%= image_tag "ods/#{I18n.locale.to_s}/ODS #{@model.sd_goal_id}.jpg", alt: "#{translated_attribute(SDGoal.find(@model.sd_goal_id).name)}", title: "#{translated_attribute(SDGoal.find(@model.sd_goal_id).name)}" , class: "ods-image-list" %>
+          </div>
+          <div class="solution-ods-card" style="float: right; width: 80%; text-align: left; padding: 0 15px 0 5px;">
+            <ul class="tags tags--proposal">
+              <% @model.decidim_proposals_proposals.map {|p| p.category}.uniq.each do |category| %>
+                <li><a style="cursor: default;"><%= translated_attribute(category.try(:name)) || "" %></a></li>
+              <% end %>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="card__footer">
+      <div class="card__support">
+        <div class="proposals-by-solution-text">
+          <%= t("solutions.proposals_by_solution") %>
+        </div>
+        <% @model.decidim_proposals_proposals.each do |decidim_proposals_proposal| %>
+          <a class="card__button button--sc light button small secondary" href="/processes/solucions-hackovid/f/86/proposals/<%= decidim_proposals_proposal.id %>" style="margin: 5px 0;">
+            <%= translated_attribute(decidim_proposals_proposal.title) %>
+          </a>
+        <% end %>
+      </div>
+    </div>
+
+  </article>
+</div>

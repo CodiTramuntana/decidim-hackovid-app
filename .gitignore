@@ -27,3 +27,5 @@ public/uploads
 /config/deploy.rb
 /config/deploy/*
 /Capfile
+
+/public/system/

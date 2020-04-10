@@ -1,4 +1,26 @@
 en:
+  activerecord:
+    attributes:
+      solution:
+        android_mkt_url: URL to the App in the Android Market
+        description: Description (max. 400 chars)
+        decidim_proposals_proposal_ids: Needs that solve
+        explanation: Architecture explanation (max. 800 chars)
+        file: Market publication probe
+        firebase_shared: Have you shared your App via Firebase App Distribution?
+        firebase_url: If yes, set the URL
+        github_link: Link to project's GitHub repository
+        ios_mkt_url: UURL to the App in the Apple Market
+        representative_email: Representative's email
+        representative_first_name: Representative's first name
+        representative_last_name: Representative's last name
+        representative_phone_num: Representative's phone number
+        sd_goal_id: Sustainable Development Goal (SDG/ODS)
+        team_name: Team name
+        title: Title
+        user: User
+        web_url: Web site URL
+        youtube_link: "YouTube video ID. <strong>ATTENTION!:</strong> Enter only the ID highlighted in bold: https://www.youtube.com/watch?v=<strong>XxXXXxXXXx</strong>"
   decidim:
     pages:
       home:
@@ -10,4 +32,39 @@ en:
           developer: "IF YOU ARE A DEVELOPER"
           developer_explanation: "Join the Hackovid and provide solutions to the needs of the citizenry during confinement."
           how_to_participate_to_hackovid: "Join the Hackovid!"
-          
+  solutions:
+    count:
+      solutions_count: "%{count} Solutions"
+    edit:
+      edit_solution: Edit the Solution
+      proposals: Related Necessities
+      update: Update
+    errors:
+      external_apps_present: "At least one of the following fields must be setted: Web site URL, Market Places (Android o IOS), Firebase or publication probe."
+      mandatory_proposals: "From 1 to 3 necessities should be selected."
+      youtube_link: "Remember, you must only set the ID of the Youtube vide as explained above."
+    filters:
+      category: Category
+      search: Search
+    form:
+      markets_callout: "At least one of the folloing 4 fields must be filled:"
+    index:
+      android_mkt_url: Android
+      comming_soon: Disponible en breu
+      created_at: "Data de publicació"
+      export: Exporta
+      github_link: Codi font
+      ios_mkt_url: Apple
+      new_solution: "Nova solució"
+      solutions_count: "%{count} Solucions"
+      web_url: Web
+    menu:
+      solutions: Solutions
+    new:
+      new_solution: "New Solution"
+      proposals: "Related Necessities"
+      publish: "Publish Solution"
+    proposals_by_solution: "Solved needs:"
+    success: "The Solution has been successfully published."
+    success_deleted: "The solution has been successfully deleted."
+    error: "There is a problem with this action."

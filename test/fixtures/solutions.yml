@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyText
+  youtube_link: MyText
+  github_link: MyString
+  category: one
+  web_url: MyString
+  android_mkt_url: MyString
+  ios_mkt_url: MyString
+  ods: one
+
+two:
+  title: MyString
+  description: MyText
+  youtube_link: MyText
+  github_link: MyString
+  category: two
+  web_url: MyString
+  android_mkt_url: MyString
+  ios_mkt_url: MyString
+  ods: two

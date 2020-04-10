@@ -1,13 +1,70 @@
 es:
+  activerecord:
+    attributes:
+      solution:
+        android_mkt_url: URL de la App en el Market de Android
+        description: Descripción (máx. 400 carácteres)
+        decidim_proposals_proposal_ids: Necesidades que resuelve
+        file: Justificante de publicación a los Markets
+        firebase_shared: Habéis compartido la App a través de Firebase App Distribution?
+        firebase_url: En caso afirmativo indica la URL
+        explanation: Explicación Arquitectura (máx. 800 carácteres)
+        github_link: Enlace al repositorio GitHub del proyecto
+        ios_mkt_url: URL de la App en el Market de Apple
+        representative_email: Correo electrónico del representante del equipo
+        representative_first_name: Nombre del representante del equipo
+        representative_last_name: Apellidos del representante del equipo
+        representative_phone_num: Móvil del representante del equipo
+        sd_goal_id: Objetivo de Desarrollo Sostenible (ODS)
+        team_name: Nombre del equipo
+        title: Título
+        user: Usuario
+        web_url: URL del sitio web
+        youtube_link: "ID del Vídeo en Youtube. <strong>¡ATENCIÓN!:</strong> Entrad solo el ID en negrita. https://www.youtube.com/watch?v=<strong>XxXXXxXXXx</strong>"
   decidim:
     pages:
       home:
         extended:
           anyone: "ESTÉS DONDE ESTÉS"
-          anyone_explanation: "Descarga y comparte las soluciones que salgan de la hackatón con todas las personas que las puedan necessitar"
+          anyone_explanation: "Descarga y comparte las soluciones que salgan de la hackatón con todas las personas que las puedan necesitar"
           citizen: "SI ERES UNA CIUDADANA O CIUDADANO"
           citizen_explanation: "Vota las necesidades más urgentes que tienes durante el confinamiento y propón de nuevas"
           developer: "SI ERES DESARROLLADOR/A TIC"
-          developer_explanation: "Une-te a la Hackovid y aporta soluciones a las necesidades de la ciudadanía durante el confinamiento."
-          how_to_participate_to_hackovid: "Participa a la Hackovid!"
-          
+          developer_explanation: "Únete a la Hackovid y aporta soluciones a las necesidades de la ciudadanía durante el confinamiento."
+          how_to_participate_to_hackovid: "¡Participa a la Hackovid!"
+  solutions:
+    count:
+      solutions_count: "%{count} Soluciones"
+    edit:
+      edit_solution: "Modifica la Solución"
+      proposals: "Necesidades relacionadas"
+      update: "Actualizar"
+    errors:
+      external_apps_present: "Tienes que indicar almenos uno de estos campos: Web, Market Places (Android o IOS), Firebase o Justificante de publicación."
+      mandatory_proposals: "Tienes que indicar entre 1 y 3 necesidades."
+      youtube_link: "Recuerda que sólo has de poner la ID del video de Youtube como se ha indicado anteriormente."
+    filters:
+      category: Categoría
+      search: Buscar
+    form:
+      markets_callout: "Como mínimo uno de los siguientes 4 campos ha de estar rellenado:"
+    index:
+      android_mkt_url: Android
+      comming_soon: Disponible en breve
+      created_at: "Data de publicación"
+      export: Exporta
+      github_link: Código fuente
+      ios_mkt_url: Apple
+      new_solution: "Nueva solución"
+      solutions_count: "%{count} Soluciones"
+      web_url: Web
+    menu:
+      solutions: Soluciones
+    new:
+      new_solution: "Nueva solución"
+      proposals: "Necesidades relacionadas"
+      publish: "Publicar Solución"
+    proposals_by_solution: "Necesidades que resuelve:"
+    success: "Se ha publicado correctamente la solución."
+    success_deleted: "Se ha eliminado correctamente la solución."
+    error: "Hay algún problema con esta acción."

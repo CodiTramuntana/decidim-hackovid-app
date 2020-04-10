@@ -1,0 +1,45 @@
+<%= form.text_field :title %>
+<%= form.text_field :team_name %>
+<%= form.email_field :representative_email %>
+<%= form.text_field :representative_first_name %>
+<%= form.text_field :representative_last_name %>
+<%= form.text_field :representative_phone_num %>
+<%= form.text_area :description, maxlength: 400 %>
+<%= form.text_area :explanation, maxlength: 800 %>
+<%= form.text_field :youtube_link %>
+<%= form.url_field :github_link %>
+<br />
+<div class="flash callout secondary"><%= I18n.t("solutions.form.markets_callout") %></div>
+<fieldset>
+<%= form.url_field :web_url %>
+<%= form.url_field :android_mkt_url %>
+<%= form.url_field :ios_mkt_url %>
+<%= form.file_field :file %>
+<% if %W[edit update].include?(action_name) %>
+  <% if @solution.file_file_name.present? %>
+  <%= image_tag @solution.file.url %>
+  <% else %>
+  <i>No hi ha imatge del justificant</i>
+  <% end %>
+<% end %>
+</fieldset>
+<br />
+<br />
+<%= form.check_box :firebase_shared %>
+<%= form.url_field :firebase_url %>
+<br />
+<%= form.select(:sd_goal_id, options_for_select(ods_options)) %>
+
+<% ods_options.each_with_index do |od_option| %>
+  <% ods_id = od_option[1] %>
+  <%= image_tag "ods/#{locale.to_s}/ODS #{ods_id}.jpg", alt: "#{ods_id}", title: "#{od_option[0]}" , class: "ods-image-form" %>
+<% end %>
+<div class="solution-space-form"></div>
+<%= form.hidden_field :user, value: current_user.id %>
+
+<% proposals = Decidim::Proposals::Proposal.published.not_hidden.where(component: current_component).all %>
+
+<%= form.select :decidim_proposals_proposal_ids, options_for_select(proposals.map{ |p| [p.title, p.id] }, @solution.decidim_proposals_proposal_ids), {}, id: 'decidim_proposals_proposal_ids', multiple: true %>
+
+<div class="solution-space-form"></div>
+<div class="solution-space-form"></div>

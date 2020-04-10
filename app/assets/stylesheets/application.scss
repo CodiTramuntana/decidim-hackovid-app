@@ -1,8 +1,9 @@
 @import "decidim/application";
 @import "hackovid";
+@import "select2";
 
 .main-footer .footer-nav{
-  a[href^="/open-data/download"] { 
-    display: none; 
-  }  
+  a[href^="/open-data/download"] {
+    display: none;
+  }
 }
