@@ -17,6 +17,11 @@ class SolutionsSerializer < Decidim::Exporters::Serializer
     h= {
       id: solution.id,
       title: solution.title,
+      team_name: solution.team_name,
+      representative_email: solution.representative_email,
+      representative_first_name: solution.representative_first_name, 
+      representative_last_name: solution.representative_last_name,
+      representative_phone_num: solution.representative_phone_num,
       description: solution.description,
       explanation: solution.explanation,
       youtube_link: "https://www.youtube.com/watch?v=#{solution.youtube_link}",
@@ -29,7 +34,6 @@ class SolutionsSerializer < Decidim::Exporters::Serializer
       market_probe: solution.file_file_name,
       ods: solution.sd_goal_id,
       ods_name: solution&.sd_goal.name,
-      team_name: solution.team_name,
       decidim_user_id: solution.decidim_user_id,
       decidim_user_email: solution&.user&.email,
       decidim_user_name: solution&.user&.name,
@@ -37,10 +41,10 @@ class SolutionsSerializer < Decidim::Exporters::Serializer
       updated_at: solution.updated_at,
     }
     h[:categories]= solution.decidim_proposals_proposals.map do |p|
-      translated_attribute(p.category.try(:name))
+      "<#{translated_attribute(p.category.try(:name))}>"
     end.uniq
     h[:necessitats]= solution.decidim_proposals_proposals.map do |p|
-      Decidim::Proposals::ProposalPresenter.new(p).title
+      "<#{Decidim::Proposals::ProposalPresenter.new(p).title}>"
     end
     h
   end

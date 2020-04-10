@@ -11,6 +11,10 @@ en:
         firebase_url: If yes, set the URL
         github_link: Link to project's GitHub repository
         ios_mkt_url: UURL to the App in the Apple Market
+        representative_email: Representative's email
+        representative_first_name: Representative's first name
+        representative_last_name: Representative's last name
+        representative_phone_num: Representative's phone number
         sd_goal_id: Sustainable Development Goal (SDG/ODS)
         team_name: Team name
         title: Title
@@ -60,7 +64,7 @@ en:
       new_solution: "New Solution"
       proposals: "Related Necessities"
       publish: "Publish Solution"
-    proposals_by_solution: "Needs that solve:"
+    proposals_by_solution: "Solved needs:"
     success: "The Solution has been successfully published."
     success_deleted: "The solution has been successfully deleted."
     error: "There is a problem with this action."

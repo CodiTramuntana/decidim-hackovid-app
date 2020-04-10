@@ -65,7 +65,7 @@ class SolutionsController < Decidim::ApplicationController
   def export
     return head :forbidden unless current_user.admin?
 
-    rs= Decidim::Exporters.find_exporter('CSV').new(Solution.all, SolutionsSerializer).export
+    rs= Decidim::Exporters.find_exporter('CSV').new(Solution.order(:created_at).all, SolutionsSerializer).export
     send_data(rs.read, filename: rs.filename('solucions'))
   end
 
@@ -100,9 +100,11 @@ class SolutionsController < Decidim::ApplicationController
 
   def solution_params
     permitted= [:title, :team_name, :description, :explanation, :youtube_link, :github_link,
-      :firebase_shared, :firebase_url,
+      :representative_email, :representative_first_name, :representative_last_name, :representative_phone_num,
       :web_url, :android_mkt_url, :ios_mkt_url,
-      :sd_goal_id, :user_id, :file, decidim_proposals_proposal_ids:[]]
+      :firebase_shared, :firebase_url,
+      :sd_goal_id, :user_id, :file, {decidim_proposals_proposal_ids: []},
+    ]
     params.require(:solution).permit(*permitted)
   end
 

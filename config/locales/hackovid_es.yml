@@ -11,6 +11,10 @@ es:
         explanation: Explicación Arquitectura (máx. 800 carácteres)
         github_link: Enlace al repositorio GitHub del proyecto
         ios_mkt_url: URL de la App en el Market de Apple
+        representative_email: Correo electrónico del representante del equipo
+        representative_first_name: Nombre del representante del equipo
+        representative_last_name: Apellidos del representante del equipo
+        representative_phone_num: Móvil del representante del equipo
         sd_goal_id: Objetivo de Desarrollo Sostenible (ODS)
         team_name: Nombre del equipo
         title: Título

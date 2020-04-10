@@ -11,6 +11,10 @@ ca:
         firebase_url: En cas afirmatiu indica la URL
         github_link: Enllaç al repositori GitHub del projecte
         ios_mkt_url: URL de l'App en el Market d'Apple
+        representative_email: Correu electrònic del representant de l'equip
+        representative_first_name: Nom del representant de l'equip
+        representative_last_name: Cognoms del representant de l'equip
+        representative_phone_num: Mòbil del representant de l'equip
         sd_goal_id: Objectiu de Desenvolupament Sostenible (ODS)
         team_name: Nom de l'equip
         title: Títol
