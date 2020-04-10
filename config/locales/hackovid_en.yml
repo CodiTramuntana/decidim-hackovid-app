@@ -1,4 +1,21 @@
 en:
+  activerecord:
+    attributes:
+      solution:
+        description: Description (max. 400 chars)
+        explanation: Architecture explanation (max. 800 chars)
+        title: Title
+        youtube_link: "YouTube video ID. E.g., the ID is highlighted in blod: https://www.youtube.com/watch?v=<strong>XxXXXxXXXx</strong>"
+        github_link: Link to project's GitHub repository
+        web_url: Web site URL
+        android_mkt_url: URL to the App in the Android Market
+        ios_mkt_url: UURL to the App in the Apple Market
+        source_link: Firebase URL
+        sd_goal_id: Sustainable Development Goal (SDG/ODS)
+        team_name: Team name
+        user: User
+        decidim_proposals_proposal_ids: Necessities
+        file: Market publication probe
   decidim:
     pages:
       home:
@@ -10,4 +27,29 @@ en:
           developer: "IF YOU ARE A DEVELOPER"
           developer_explanation: "Join the Hackovid and provide solutions to the needs of the citizenry during confinement."
           how_to_participate_to_hackovid: "Join the Hackovid!"
-          
+  solutions:
+    edit:
+      edit_solution: Edit the Solution
+      proposals: Related Necessities
+      update: Update
+    errors:
+      external_apps_present: "At least one of the following fields must be setted: Web site URL, Market Places (Android o IOS), Firebase or publication probe."
+      mandatory_proposals: "From 1 to 3 necessities should be selected."
+    filters:
+      category: Category
+      search: Search
+    index:
+      android_mkt_url: Android
+      comming_soon: Disponible en breu
+      created_at: "Data de publicació"
+      export: Exporta
+      github_link: Codi font
+      ios_mkt_url: Apple
+      new_solution: "Nova solució"
+      solutions_count: "%{count} Solucions"
+      web_url: Web
+    new:
+      new_solution: "New Solution"
+      proposals: "Related Necessities"
+      publish: "Publish Solution"
+    success: "The Solution has been successfully published."
