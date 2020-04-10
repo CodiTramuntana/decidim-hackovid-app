@@ -52,7 +52,7 @@ es:
       solutions_count: "%{count} Soluciones"
       web_url: Web
     menu:
-      solutions: Solucione
+      solutions: Soluciones
     new:
       new_solution: "Nueva solución"
       proposals: "Necesidades relacionadas"
