@@ -5,7 +5,7 @@ ca:
         android_mkt_url: URL de l'App en el Market d'Android
         description: Descripció (màx. 400 caràcters)
         decidim_proposals_proposal_ids: Necessitats que resol
-        explanation: Explicació Arquitectura (màx. 800 caràcters)
+        explanation: Arquitectura i tecnologíes utilitzades (màx. 800 caràcters)
         file: Justificant de publicació als Markets
         firebase_shared: Heu compartit l'aplicació a través de Firebase App Distribution?
         firebase_url: En cas afirmatiu indica la URL
@@ -52,7 +52,9 @@ ca:
       android_mkt_url: Android
       comming_soon: Disponible en breu
       created_at: "Data de publicació"
-      export: Exporta
+      export_csv: Exporta a CSV
+      export_excel: Exporta a excel
+      firebase_url: Firebase
       github_link: Codi font
       ios_mkt_url: Apple
       new_solution: "Nova solució"

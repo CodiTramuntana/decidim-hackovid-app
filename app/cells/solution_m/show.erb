@@ -43,9 +43,19 @@
             &nbsp;<%= image_tag "icon_apple.png", title: t("solutions.index.ios_mkt_url") %>
           </a>
           <% end %>
+          <% if @model.firebase_shared? && @model.firebase_url.present? %>
+          <a href="<%= @model.firebase_url %>" target="_blank">
+            &nbsp;<%= image_tag "icon_firebase.png", title: t("solutions.index.firebase_url") %>
+          </a>
+          <% end %>
         <% end %>
       </div>
       <div class="solution-desc"><%= @model.description %></div>
+      <br />
+      <div class="proposals-by-solution-text">
+          <%= Solution.human_attribute_name(:explanation) %>:
+      </div>
+      <div class="solution-desc"><%= @model.explanation %></div>
     </div>
     <div class="card__status">
       <ul class="card-data">

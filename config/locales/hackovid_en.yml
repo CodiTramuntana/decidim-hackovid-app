@@ -5,7 +5,7 @@ en:
         android_mkt_url: URL to the App in the Android Market
         description: Description (max. 400 chars)
         decidim_proposals_proposal_ids: Needs that solve
-        explanation: Architecture explanation (max. 800 chars)
+        explanation: Architecture and technologies (max. 800 chars)
         file: Market publication probe
         firebase_shared: Have you shared your App via Firebase App Distribution?
         firebase_url: If yes, set the URL
@@ -53,6 +53,7 @@ en:
       comming_soon: Disponible en breu
       created_at: "Data de publicació"
       export: Exporta
+      firebase_url: Firebase
       github_link: Codi font
       ios_mkt_url: Apple
       new_solution: "Nova solució"
