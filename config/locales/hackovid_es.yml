@@ -36,9 +36,9 @@ es:
     count:
       solutions_count: "%{count} Soluciones"
     countdown:
-      text: Tiempo restante para presentar tu Solución
+      text: Tiempo restante para presentar tu solución
     edit:
-      edit_solution: "Modifica la Solución"
+      edit_solution: "Modifica la solución"
       proposals: "Necesidades relacionadas"
       update: "Actualizar"
     errors:
@@ -66,7 +66,7 @@ es:
     new:
       new_solution: "Nueva solución"
       proposals: "Necesidades relacionadas"
-      publish: "Publicar Solución"
+      publish: "Publicar solución"
     proposals_by_solution: "Necesidades que resuelve:"
     success: "Se ha publicado correctamente la solución."
     success_deleted: "Se ha eliminado correctamente la solución."

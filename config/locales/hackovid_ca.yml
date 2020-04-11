@@ -36,9 +36,9 @@ ca:
     count:
       solutions_count: "%{count} Solucions"
     countdown:
-      text: Temps restant per a presentar la teva Solució
+      text: Temps restant per a presentar la teva solució
     edit:
-      edit_solution: "Modifica la Solució"
+      edit_solution: "Modifica la solució"
       proposals: "Necessitats relacionades"
       update: "Actualitza"
     errors:
@@ -65,7 +65,7 @@ ca:
     new:
       new_solution: "Nova solució"
       proposals: "Necessitats relacionades"
-      publish: "Publicar Solució"
+      publish: "Publicar solució"
     proposals_by_solution: "Necessitats que resol:"
     success: "S'ha publicat correctament la solució."
     success_deleted: "S'ha eliminat correctament la solució."

@@ -36,9 +36,9 @@ en:
     count:
       solutions_count: "%{count} Solutions"
     countdown:
-      text: Remaining time to deliver your Solution
+      text: Remaining time to deliver your solution
     edit:
-      edit_solution: Edit the Solution
+      edit_solution: Edit the solution
       proposals: Related Necessities
       update: Update
     errors:
@@ -64,10 +64,10 @@ en:
     menu:
       solutions: Solutions
     new:
-      new_solution: "New Solution"
+      new_solution: "New solution"
       proposals: "Related Necessities"
-      publish: "Publish Solution"
+      publish: "Publish solution"
     proposals_by_solution: "Solved needs:"
-    success: "The Solution has been successfully published."
+    success: "The solution has been successfully published."
     success_deleted: "The solution has been successfully deleted."
     error: "There is a problem with this action."
