@@ -25,7 +25,7 @@
         </a>
       </div>
       <div class="link-apps__cards">
-        <% if @model.web_url.blank? and @model.android_mkt_url.blank? and @model.ios_mkt_url.blank? %>
+        <% if @model.web_url.blank? && @model.android_mkt_url.blank? && @model.ios_mkt_url.blank? && (@model.firebase_url.blank?)%>
           <%= t("solutions.index.comming_soon") %>
         <% else %>
           <% if @model.web_url.present? %>
@@ -43,7 +43,7 @@
             &nbsp;<%= image_tag "icon_apple.png", title: t("solutions.index.ios_mkt_url") %>
           </a>
           <% end %>
-          <% if @model.firebase_shared? && @model.firebase_url.present? %>
+          <% if @model.firebase_url.present? %>
           <a href="<%= @model.firebase_url %>" target="_blank">
             &nbsp;<%= image_tag "icon_firebase.png", title: t("solutions.index.firebase_url") %>
           </a>
