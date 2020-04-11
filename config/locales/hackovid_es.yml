@@ -3,7 +3,7 @@ es:
     attributes:
       solution:
         android_mkt_url: URL de la App en el Market de Android
-        description: Descripción (máx. 400 carácteres)
+        description: Descripción para la ciudadanía  (máx. 400 carácteres)
         decidim_proposals_proposal_ids: Necesidades que resuelve
         explanation: Arquitectura y tecnologías utilitzadas (máx. 800 carácteres)
         file: Justificante de publicación a los Markets

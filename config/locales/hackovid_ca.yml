@@ -3,9 +3,9 @@ ca:
     attributes:
       solution:
         android_mkt_url: URL de l'App en el Market d'Android
-        description: Descripció (màx. 400 caràcters)
+        description: Descripció per la ciutadania (màx. 400 caràcters)
         decidim_proposals_proposal_ids: Necessitats que resol
-        explanation: Arquitectura i tecnologíes utilitzades (màx. 800 caràcters)
+        explanation: Arquitectura i tecnologies utilitzades (màx. 800 caràcters)
         file: Justificant de publicació als Markets
         firebase_shared: Heu compartit l'aplicació a través de Firebase App Distribution?
         firebase_url: En cas afirmatiu indica la URL

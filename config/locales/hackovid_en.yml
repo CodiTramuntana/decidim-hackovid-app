@@ -3,8 +3,8 @@ en:
     attributes:
       solution:
         android_mkt_url: URL to the App in the Android Market
-        description: Description (max. 400 chars)
-        decidim_proposals_proposal_ids: Needs that solve
+        description: Description for the general public (max. 400 chars)
+        decidim_proposals_proposal_ids: Solved needs
         explanation: Architecture and technologies (max. 800 chars)
         file: Market publication probe
         firebase_shared: Have you shared your App via Firebase App Distribution?

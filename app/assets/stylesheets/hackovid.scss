@@ -39,10 +39,11 @@
   }
 }
 
-
 /**
-  * index form
+  * New Solution form
   */
-div.filters__section.sd-goals label.selected{
-  background-color: black;
+form.form div.mandatory label:before{
+  content: "*";
 }
+
+
