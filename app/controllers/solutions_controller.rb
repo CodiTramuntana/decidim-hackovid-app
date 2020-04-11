@@ -65,7 +65,7 @@ class SolutionsController < Decidim::ApplicationController
   def export
     return head :forbidden unless current_user.admin?
 
-    rs= Decidim::Exporters.find_exporter('CSV').new(Solution.order(:created_at).all, SolutionsSerializer).export
+    rs= Decidim::Exporters.find_exporter('Excel').new(Solution.order(:created_at).all, SolutionsSerializer).export
     send_data(rs.read, filename: rs.filename('solucions'))
   end
 
