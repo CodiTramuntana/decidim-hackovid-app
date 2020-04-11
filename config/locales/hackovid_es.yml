@@ -35,6 +35,8 @@ es:
   solutions:
     count:
       solutions_count: "%{count} Soluciones"
+    countdown:
+      text: Tiempo restante para presentar tu Solución
     edit:
       edit_solution: "Modifica la Solución"
       proposals: "Necesidades relacionadas"

@@ -35,6 +35,8 @@ en:
   solutions:
     count:
       solutions_count: "%{count} Solutions"
+    countdown:
+      text: Remaining time to deliver your Solution
     edit:
       edit_solution: Edit the Solution
       proposals: Related Necessities

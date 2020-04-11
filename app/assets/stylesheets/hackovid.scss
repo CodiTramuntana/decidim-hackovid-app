@@ -46,4 +46,24 @@ form.form div.mandatory label:before{
   content: "*";
 }
 
-
+/**
+  * Countdown
+  */
+.countdown {
+  /*margin: 0 32%;*/
+  margin-top: -4rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 1.3rem;
+  color:var(--primary);
+  max-width: 400px;
+}
+.countdown #watch {
+  font-family: monospace;
+  font-weight: bold;
+  /*border: 5px;
+  border-style: solid;
+  border-radius: 10px;*/
+  border: 2.5px solid #e8e8e8;
+  display:none;
+}

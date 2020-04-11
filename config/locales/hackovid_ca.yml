@@ -35,6 +35,8 @@ ca:
   solutions:
     count:
       solutions_count: "%{count} Solucions"
+    countdown:
+      text: Temps restant per a presentar la teva Solució
     edit:
       edit_solution: "Modifica la Solució"
       proposals: "Necessitats relacionades"
@@ -52,8 +54,7 @@ ca:
       android_mkt_url: Android
       comming_soon: Disponible en breu
       created_at: "Data de publicació"
-      export_csv: Exporta a CSV
-      export_excel: Exporta a excel
+      export: Exporta
       firebase_url: Firebase
       github_link: Codi font
       ios_mkt_url: Apple
