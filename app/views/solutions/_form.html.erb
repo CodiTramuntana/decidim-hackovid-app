@@ -17,6 +17,7 @@
 <%= form.file_field :file %>
 <% if %W[edit update].include?(action_name) %>
   <% if @solution.file_file_name.present? %>
+  <%= link_to(@solution.file_file_name, asset_path(@solution.file.url), target: '_blank') %>
   <%= image_tag @solution.file.url %>
   <% else %>
   <i>No hi ha imatge del justificant</i>
