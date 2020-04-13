@@ -11,7 +11,8 @@
       <%= render partial: "count" %>
     </h2>
     <% if current_user %>
-      <% if (DateTime.current < Time.zone.parse('2020-04-13 09:00:00')) %>
+      <!--<%= DateTime.current %> < <%= Time.zone.parse('2020-04-13 09:00:00') %> -->
+      <% if false %>
       <%= action_authorized_link_to :create, new_solution_path, class: "title-action__action button small", data: { "redirect_url" => new_solution_path } do %>
         <%= t(".new_solution") %>
         <%= icon "plus" %>
