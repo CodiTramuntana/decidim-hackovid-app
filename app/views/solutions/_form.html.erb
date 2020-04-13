@@ -29,7 +29,7 @@
 <%= form.check_box :firebase_shared %>
 <%= form.url_field :firebase_url %>
 <br />
-<div class="mandatory"><%= form.select(:sd_goal_id, options_for_select(ods_options)) %></div>
+<div class="mandatory"><%= form.select(:sd_goal_id, ods_options) %></div>
 
 <% ods_options.each_with_index do |od_option| %>
   <% ods_id = od_option[1] %>
