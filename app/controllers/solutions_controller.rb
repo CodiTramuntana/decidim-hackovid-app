@@ -21,10 +21,12 @@ class SolutionsController < Decidim::ApplicationController
   end
 
   def new
+    return head :forbidden unless current_user.admin?
     @solution = Solution.new
   end
 
   def create
+    return head :forbidden unless current_user.admin?
     @solution = Solution.new( solution_params )
 
     @solution.user= current_user
@@ -37,10 +39,12 @@ class SolutionsController < Decidim::ApplicationController
   end
 
   def edit
+    return head :forbidden unless current_user.admin?
     retrieve_solution
   end
 
   def update
+    return head :forbidden unless current_user.admin?
     retrieve_solution
 
     if @solution.update(solution_params)
@@ -52,6 +56,7 @@ class SolutionsController < Decidim::ApplicationController
   end
 
   def destroy
+    return head :forbidden unless current_user.admin?
     retrieve_solution
 
     if @solution.destroy
