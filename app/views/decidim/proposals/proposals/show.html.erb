@@ -111,6 +111,19 @@ extra_admin_link(
     <%= linked_resources_for @proposal, :proposals, "copied_from_component" %>
 
     <%= cell "decidim/proposals/endorsers_list", @proposal, context: { current_user: current_user } %>
+    <div class="section">
+      <div class="row">
+        <div class="columns large-12">
+          <h4 class="section-heading"><%= t('.solutions_list_title') %></h4>
+        </div>
+      </div>
+    </div>
+    <% solutions_query= ::SolutionProposalsHelper.solutions_for_proposal(@proposal) %>
+    <div class="row small-up-1 medium-up-2 card-grid">
+    <% solutions_query.each do |solution| %>
+      <%= cell "solution_m", solution, {} %>
+    <% end %>
+    </div>
     <%= amendments_for @proposal %>
   </div>
 </div>
