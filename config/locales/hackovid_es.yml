@@ -51,6 +51,7 @@ es:
       youtube_link: "Recuerda que sólo has de poner la ID del video de Youtube como se ha indicado anteriormente."
     filters:
       category: Categoría
+      necessitat: Necesidad
       search: Buscar
     form:
       markets_callout: "Como mínimo uno de los siguientes 4 campos ha de estar rellenado:"

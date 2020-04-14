@@ -51,6 +51,7 @@ ca:
       youtube_link: "Recorda que només has de posar la ID del vídeo de Youtube com s'ha indicat abans."
     filters:
       category: Categoria
+      necessitat: Necessitat
       search: Cerca
     form:
       markets_callout: "Com a mínim un dels següents 4 camps ha d'estar emplenat:"

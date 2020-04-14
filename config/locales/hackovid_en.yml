@@ -51,6 +51,7 @@ en:
       youtube_link: "Remember, you must only set the ID of the Youtube vide as explained above."
     filters:
       category: Category
+      necessitat: Necessity
       search: Search
     form:
       markets_callout: "At least one of the folloing 4 fields must be filled:"
