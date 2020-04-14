@@ -32,6 +32,10 @@ en:
           developer: "IF YOU ARE A DEVELOPER"
           developer_explanation: "Join the Hackovid and provide solutions to the needs of the citizenry during confinement."
           how_to_participate_to_hackovid: "Join the Hackovid!"
+    proposals:
+      proposals:
+        show:
+          solutions_list_title: List of solutions to this need
   solutions:
     count:
       solutions_count: "%{count} Solutions"
@@ -67,6 +71,9 @@ en:
       new_solution: "New solution"
       proposals: "Related Necessities"
       publish: "Publish solution"
+    proposals:
+      index:
+        solutions: Solutions
     proposals_by_solution: "Solved needs:"
     success: "The solution has been successfully published."
     success_deleted: "The solution has been successfully deleted."

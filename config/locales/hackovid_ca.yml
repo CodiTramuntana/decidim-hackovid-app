@@ -32,6 +32,10 @@ ca:
           developer: "SI ETS DESENVOLUPADOR/A TIC"
           developer_explanation: "Uneix-te a la Hackovid i aporta solucions a les necessitats de la ciutadania durant el confinament."
           how_to_participate_to_hackovid: "Participa a la Hackovid!"
+    proposals:
+      proposals:
+        show:
+          solutions_list_title: Llistat de solucions a aquesta necessitat
   solutions:
     count:
       solutions_count: "%{count} Solucions"
@@ -66,6 +70,9 @@ ca:
       new_solution: "Nova solució"
       proposals: "Necessitats relacionades"
       publish: "Publicar solució"
+    proposals:
+      index:
+        solutions: Solucions
     proposals_by_solution: "Necessitats que resol:"
     success: "S'ha publicat correctament la solució."
     success_deleted: "S'ha eliminat correctament la solució."
