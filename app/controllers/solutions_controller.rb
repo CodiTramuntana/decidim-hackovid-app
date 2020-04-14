@@ -83,9 +83,10 @@ class SolutionsController < Decidim::ApplicationController
   def default_filter_params
     {
       component: current_component,
-      search_text: "",
+      search_text: '',
       ods_ids: {},
       category_id: default_filter_category_params,
+      proposal_id: '',
     }
   end
 
@@ -108,7 +109,7 @@ class SolutionsController < Decidim::ApplicationController
       :representative_email, :representative_first_name, :representative_last_name, :representative_phone_num,
       :web_url, :android_mkt_url, :ios_mkt_url,
       :firebase_shared, :firebase_url,
-      :sd_goal_id, :file, {decidim_proposals_proposal_ids: []},
+      :sd_goal_id, :proposal_id, :file, {decidim_proposals_proposal_ids: []},
     ]
     params.require(:solution).permit(*permitted)
   end

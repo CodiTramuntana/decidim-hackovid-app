@@ -41,8 +41,21 @@ class SolutionsSearch < ::Searchlight::Search
     query.where(sd_goal_id: selected_sdgs)
   end
 
+  # NOTE: can not use this filtering because if will also filter categories that the solution has due to other proposals
+  # Moved to `results`
+  def search_proposal_id
+  #   return query if proposal_id.blank?
+  #
+  #   query.joins(:decidim_proposals_proposals).where("decidim_proposals_proposals_solutions.decidim_proposals_proposal_id" => proposal_id)
+    query
+  end
+
   def results
-    Solution.where(id: super.pluck(:id).uniq)
+    if proposal_id.present?
+      Solution.joins(:decidim_proposals_proposals).where("decidim_proposals_proposals_solutions.decidim_proposals_proposal_id" => proposal_id).where(id: super.pluck(:id).uniq)
+    else
+      Solution.where(id: super.pluck(:id).uniq)
+    end
   end
 
   private

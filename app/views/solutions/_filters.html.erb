@@ -12,6 +12,16 @@
     </div>
   </div>
 
+  <% if filter.proposal_id.present? %>
+    <div class="filters__section">
+      <fieldset>
+        <legend><h6 class="heading6"><%= t('.necessitat') %></h6></legend>
+          <%= ::Decidim::Proposals::Proposal.find(filter.proposal_id).title %>
+          <input name="filter[proposal_id]" type="hidden" value="<%= filter.proposal_id %>">
+      </fieldset>
+    </div>
+  <% end %>
+
   <% if current_component.categories.any? %>
     <%= form.check_boxes_tree :category_id, filter_categories_values, legend_title: t(".category") %>
   <% end %>
