@@ -51,11 +51,13 @@
         <% end %>
       </div>
       <div class="solution-desc"><%= @model.description %></div>
+      <% if false %>
       <br />
       <div class="proposals-by-solution-text">
           <%= Solution.human_attribute_name(:explanation) %>:
       </div>
       <div class="solution-desc"><%= @model.explanation %></div>
+      <% end %>
     </div>
     <div class="card__status">
       <ul class="card-data">
