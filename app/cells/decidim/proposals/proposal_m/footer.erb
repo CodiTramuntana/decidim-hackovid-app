@@ -28,7 +28,7 @@
     <div class="progress__bar__title">
     <span class="progress__bar__number"><%= solutions_query.count %>
 </span>
-    <span class="progress__bar__text"><%= link_to t('solutions.proposals.index.solutions'), Rails.application.routes.url_helpers.solutions_path(filter: {proposal_id: model.id}) %></span>
+    <span class="progress__bar__text"><%= link_to t('solutions.proposals.index.solutions'), resource_path %></span>
     </div>
   </div>
 </div>
