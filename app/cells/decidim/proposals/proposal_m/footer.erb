@@ -28,7 +28,7 @@
     <div class="progress__bar__title">
     <span class="progress__bar__number"><%= solutions_query.count %>
 </span>
-    <span class="progress__bar__text"><%= link_to t('solutions.proposals.index.solutions'), resource_path %></span>
+    <span class="progress__bar__text"><%= link_to Solution.model_name.human(count: solutions_query.count), resource_path %></span>
     </div>
   </div>
 </div>

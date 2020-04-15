@@ -1,5 +1,9 @@
 es:
   activerecord:
+    models:
+      solution:
+        one: Solución
+        other: Soluciones
     attributes:
       solution:
         android_mkt_url: URL de la App en el Market de Android
@@ -71,9 +75,6 @@ es:
       new_solution: "Nueva solución"
       proposals: "Necesidades relacionadas"
       publish: "Publicar solución"
-    proposals:
-      index:
-        solutions: Soluciones
     proposals_by_solution: "Necesidades que resuelve:"
     success: "Se ha publicado correctamente la solución."
     success_deleted: "Se ha eliminado correctamente la solución."
