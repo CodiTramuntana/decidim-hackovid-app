@@ -1,0 +1,43 @@
+<main class="wrapper">
+  <div class="row columns">
+    <div class="title-action">
+      <h2 class="title-action__title section-heading">
+        <%= t(".title") %>
+      </h2>
+    </div>
+  </div>
+  <div class="row">
+    <%= t('.intro') %>
+  </div>
+  <br/>
+  <div class="row">
+    <div class="columns mediumlarge-12 large-12">
+      <div class="row small-up-1 medium-up-3 card-grid">
+        <div class="column">
+          <%= render(partial: 'solution_card', locals: {img: '1r_premi-Diploma.jpg', search_text: 'AJUDEM.CAT'}) %>
+        </div>
+        <div class="column">
+          <%= render(partial: 'solution_card', locals: {img: '2n_premi-Diploma.jpg', search_text: 'CoronaTiquets'}) %>
+        </div>
+        <div class="column">
+          <%= render(partial: 'solution_card', locals: {img: '3r_premi-Diploma.jpg', search_text: 'RegaLocal'}) %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="columns mediumlarge-12 large-12">
+      <div class="row small-up-1 medium-up-3 card-grid">
+        <div class="column">
+          <%= render(partial: 'solution_card', locals: {img: '4t_premi-Diploma.jpg', search_text: 'TrickTroc'}) %>
+        </div>
+        <div class="column">
+          <%= render(partial: 'solution_card', locals: {img: '5e_premi-Diploma.jpg', search_text: 'EdukiApp'}) %>
+        </div>
+        <div class="column">
+          <%= render(partial: 'solution_card', locals: {img: 'DFS_premi-Diploma.jpg', search_text: 'nebots — assistència tècnica humana'}) %>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

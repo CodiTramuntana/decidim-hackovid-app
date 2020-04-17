@@ -70,6 +70,7 @@ ca:
       web_url: Web
     menu:
       solutions: Solucions
+      winners: Guanyadors/es
     new:
       new_solution: "Nova solució"
       proposals: "Necessitats relacionades"
@@ -78,3 +79,9 @@ ca:
     success: "S'ha publicat correctament la solució."
     success_deleted: "S'ha eliminat correctament la solució."
     error: "Hi ha algun problema amb aquesta acció."
+  winners:
+    show:
+      intro: Aquests són els equips que han guanyat la Hackovid. Podeu veure la seva solució clicant el botó.
+      title: Guanyadors/es
+    solution_card:
+      button: Veure solució

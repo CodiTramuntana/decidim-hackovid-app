@@ -71,6 +71,7 @@ es:
       web_url: Web
     menu:
       solutions: Soluciones
+      winners: Ganadores/as
     new:
       new_solution: "Nueva solución"
       proposals: "Necesidades relacionadas"
@@ -79,3 +80,11 @@ es:
     success: "Se ha publicado correctamente la solución."
     success_deleted: "Se ha eliminado correctamente la solución."
     error: "Hay algún problema con esta acción."
+  winners:
+    show:
+      intro: Estos son los equips que han ganado la Hackovid. Podéis ver su solución haciendo click en el botón.
+      title: Ganadores/as
+
+    solution_card:
+      button: Ver solución
+

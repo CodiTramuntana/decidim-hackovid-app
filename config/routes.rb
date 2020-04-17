@@ -10,4 +10,5 @@ Rails.application.routes.draw do
       get :export
     end
   end
+  get :winners, to: 'winners#show'
 end

@@ -46,6 +46,11 @@ Rails.application.config.to_prepare do
               '/solutions',
               position: 4,
               active: :inclusive
+
+    menu.item I18n.t('menu.winners', scope: 'solutions'),
+              '/winners',
+              position: 5,
+              active: :inclusive
   end
 
   # make decorators available
