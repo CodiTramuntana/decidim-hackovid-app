@@ -71,6 +71,7 @@ en:
       web_url: Web
     menu:
       solutions: Solutions
+      winners: Winners
     new:
       new_solution: "New solution"
       proposals: "Related Necessities"
@@ -79,3 +80,10 @@ en:
     success: "The solution has been successfully published."
     success_deleted: "The solution has been successfully deleted."
     error: "There is a problem with this action."
+  winners:
+    show:
+      intro: This are the teams that have won the Hackovid. You can see their solutions by clicking the button.
+      title: Guanyadors/es
+    solution_card:
+      button: See solution
+
