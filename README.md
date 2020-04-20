@@ -173,3 +173,83 @@ There are some overrides that must be checked on every upgrade:
   gtag('config', 'UA-162817045-1');
 </script>
 ```
+## Content block HTML at the homepage
+
+```html
+<style>
+  .home-section.calendar-home-block > .row.title{ background: grey; color: white; font-size: 32px; padding-top: 3px; padding-bottom: 3px; }
+</style>
+
+<section class="extended home-section calendar-home-block">
+  <div class="row title collapse">
+    <div class="small-12 columns text-center">
+      CALENDARI
+    </div>
+  </div>
+  <div class="row collapse">
+    <div class="small-12 medium-6 large-3 columns">
+      <img src="/images/fase_1.png" class="calendar-image-block">
+    </div>
+    <div class="small-12 medium-6 large-3 columns">
+      <img src="/images/fase_2.png" class="calendar-image-block">
+    </div>
+    <div class="small-12 medium-6 large-3 columns">
+      <img src="/images/fase_3.png" class="calendar-image-block">
+    </div>
+    <div class="small-12 medium-6 large-3 columns">
+      <img src="/images/fase_4.png" class="calendar-image-block">
+    </div>
+  </div>
+</section>
+
+
+<style>
+  .home-entry-section .home-entry-section-block{ width: 100%; position: relative; }
+  .home-entry-section .home-entry-section-block.first{background: rgb(234, 84,91);}
+  .home-entry-section .home-entry-section-block.first{background: grey;}
+  .home-entry-section .home-entry-section-block .home-entry-section-description{ position: absolute; bottom: 10px; left: 10px; color: white; width: 90%;}
+  .home-entry-section .home-entry-section-block .home-entry-section-description h3{font-size: 18px;}
+  .home-entry-section .home-entry-section-block .home-entry-section-description a.home-entry-section-links{ display: block; color: #ccc; }
+  .home-entry-section .home-entry-section-block .home-entry-section-description a.home-entry-section-links:hover{ color: #fff; }
+</style>
+
+
+<section class="wrapper-home home-section home-entry-section">
+  <div class="row">
+    <div class="small-12 medium-6 columns">
+      <div class="home-entry-section-block first">
+        <img src="/images/ciutadania.png">
+        <div class="home-entry-section-description">
+          <h3>CIUTADANIA</h3>
+          <a href="/processes/solucions-hackovid/f/86/" class="home-entry-section-links">Vota i proposa necessitats ></a>
+          <a href="#">&nbsp;</a>
+        </div>
+      </div>
+    </div>
+    <div class="small-12 medium-6 columns">
+      <div class="home-entry-section-block second">
+        <img src="/images/comunitat-tic.png">
+        <div class="home-entry-section-description">
+          <h3>COMUNITATS TIC</h3>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfpXhHVMrwm7MrPycTynvKOOcZdQQtO2MsWModVfPTO9d3qDw/viewform" class="home-entry-section-links" target="_blank">Forma el teu equip i inscriu-te ></a>
+          <a href="https://drive.google.com/file/d/1X0Pupd4vteM6al4I7OCXe_1iKddvzrfh/view?usp=sharing"  class="home-entry-section-links" target="_blank">Descarrega les bases ></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  
+
+
+<style>
+  .home-entry-section .home-partners-section img{width: 100%;}
+</style>
+
+<section class="extended home-section home-partners-section">
+  <div class="row title collapse">
+    <div class="small-12 columns text-center">
+      <img src="/images/banner-organitzadors-patrocinadors.png">
+    </div>
+  </div>
+</section>
+```
