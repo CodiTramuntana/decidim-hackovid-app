@@ -13,7 +13,7 @@ gem 'whenever'
 gem 'figaro', '>= 1.1.1'
 gem 'openssl'
 
-gem 'geocoder', '~> 1.5.2'
+gem 'geocoder', '~> 1.6.1'
 
 gem 'decidim', DECIDIM_VERSION
 gem 'decidim-term_customizer', git: 'https://github.com/CodiTramuntana/decidim-module-term_customizer'
